@@ -1,0 +1,8 @@
+E:\epamTraining\Tasks\task1\FindGCD\FindGCD\bin\Debug\netstandard2.0\Task1GCD.deps.json
+E:\epamTraining\Tasks\task1\FindGCD\FindGCD\bin\Debug\netstandard2.0\Task1GCD.dll
+E:\epamTraining\Tasks\task1\FindGCD\FindGCD\bin\Debug\netstandard2.0\Task1GCD.pdb
+E:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.AssemblyInfoInputs.cache
+E:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.AssemblyInfo.cs
+E:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.dll
+E:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.pdb
+e:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.csprojAssemblyReference.cache

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskVector", "Task2\TaskVector.csproj", "{59E0F2BA-08C5-426C-9F7A-FA5A8BD68588}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskVector", "Task2\TaskVector.csproj", "{59E0F2BA-08C5-426C-9F7A-FA5A8BD68588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestsTask2", "UnitTestыTask2\UnitTestsTask2.csproj", "{5B263E13-3C07-4817-99D3-36469E36A43E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{59E0F2BA-08C5-426C-9F7A-FA5A8BD68588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59E0F2BA-08C5-426C-9F7A-FA5A8BD68588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59E0F2BA-08C5-426C-9F7A-FA5A8BD68588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B263E13-3C07-4817-99D3-36469E36A43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B263E13-3C07-4817-99D3-36469E36A43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B263E13-3C07-4817-99D3-36469E36A43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B263E13-3C07-4817-99D3-36469E36A43E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -42,8 +42,6 @@ namespace Task1GCD
         /// <returns>The Greatest Common Divisor for 3 numbers</returns>
         public static int GetGCD(int a, int b, int c)
         {
-            c = Math.Abs(c);
-
             return GetGCD(GetGCD(a, b), c);
         }
 

@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\epamTraining\\Tasks\\task1\\FindGCD\\FindGCD\\Task1GCD.csproj",
+      "projectUniqueName": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task1\\FindGCD\\FindGCD\\Task1GCD.csproj",
       "projectName": "Task1GCD",
-      "projectPath": "E:\\epamTraining\\Tasks\\task1\\FindGCD\\FindGCD\\Task1GCD.csproj",
+      "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task1\\FindGCD\\FindGCD\\Task1GCD.csproj",
       "packagesPath": "C:\\Users\\Настя\\.nuget\\packages\\",
-      "outputPath": "E:\\epamTraining\\Tasks\\task1\\FindGCD\\FindGCD\\obj\\",
+      "outputPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task1\\FindGCD\\FindGCD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -6822,11 +6822,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\epamTraining\\Tasks\\task1\\FindGCD\\UnitTestsGCD\\UnitTestsGCD.csproj",
+      "projectUniqueName": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task1\\FindGCD\\UnitTestsGCD\\UnitTestsGCD.csproj",
       "projectName": "UnitTestsGCD",
-      "projectPath": "e:\\epamTraining\\Tasks\\task1\\FindGCD\\UnitTestsGCD\\UnitTestsGCD.csproj",
+      "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task1\\FindGCD\\UnitTestsGCD\\UnitTestsGCD.csproj",
       "packagesPath": "C:\\Users\\Настя\\.nuget\\packages\\",
-      "outputPath": "e:\\epamTraining\\Tasks\\task1\\FindGCD\\UnitTestsGCD\\obj\\",
+      "outputPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task1\\FindGCD\\UnitTestsGCD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6845,8 +6845,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "e:\\epamTraining\\Tasks\\task1\\FindGCD\\FindGCD\\Task1GCD.csproj": {
-              "projectPath": "e:\\epamTraining\\Tasks\\task1\\FindGCD\\FindGCD\\Task1GCD.csproj"
+            "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task1\\FindGCD\\FindGCD\\Task1GCD.csproj": {
+              "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task1\\FindGCD\\FindGCD\\Task1GCD.csproj"
             }
           }
         }

@@ -121,6 +121,43 @@ namespace Task1GCD
         }
 
         /// <summary>
+        /// Recursive version of binary method for getting Greatest Common Divisor for 2 numbers
+        /// </summary>
+        /// <param name="a">First number for GCD</param>
+        /// <param name="b">Second number for GCD</param>
+        /// <returns>The Greatest Common Divisor for 2 numbers by binary method</returns>
+        public static int GetBinaryGCD(int a, int b)
+        {
+            a = Math.Abs(a);
+            b = Math.Abs(b);
+            watch.Start();
+
+            if (a == b)
+                return a;
+
+            if (a == 0)
+                return b;
+
+            if (b == 0)
+                return a;
+            
+            if ((a & 1) == 0)
+                if ((b & 1) != 0)
+                    return GetGCD(a >> 1, b);
+                else
+                    return GetGCD(a >> 1, b >> 1) << 1;
+
+            if ((b & 1) == 0)
+                return GetGCD(a, b >> 1);
+            
+                
+            if (a > b)
+                return GetGCD((a - b) >> 1, b);
+
+            return GetGCD((b - a) >> 1, a);
+        }
+
+        /// <summary>
         /// Method for getting Greatest Common Divisor(GCD) for 2 numbers
         /// with runtime
         /// </summary>

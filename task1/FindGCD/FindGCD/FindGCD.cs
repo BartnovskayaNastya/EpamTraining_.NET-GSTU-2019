@@ -72,38 +72,52 @@ namespace Task1GCD
             a = Math.Abs(a);
             b = Math.Abs(b);
             watch.Start();
-            int k = 1;
-            while ((a != 0) && (b != 0))
+
+            int k = 0;
+
+            if (a == 0)
             {
-                while ((a % 2 == 0) && (b % 2 == 0))
-                {
-                    a /= 2;
-                    b /= 2;
-                    k *= 2;
-                }
+                watch.Stop();
+                time = watch.Elapsed.Ticks;
+                return b;
 
-                while (a % 2 == 0)
-                {
-                    a /= 2;
-                }
+            } 
+            else if (b == 0)
+            {
+                watch.Stop();
+                time = watch.Elapsed.Ticks;
+                return a;
 
-                while (b % 2 == 0)
-                {
-                    b /= 2;
-                }
-
-                if (a >= b)
-                {
-                    a -= b;
-                }
-                else
-                {
-                    b -= a;
-                }
             }
+            else
+            {
+                while (((a | b) & 1) == 0)
+                {
+                    k++;
+                    a >>= 1;
+                    b >>= 1;
+                }
+
+                while ((a & 1) == 0)
+                    a >>= 1;
+
+                do
+                {
+                    while ((b & 1) == 0)
+                        b >>= 1;
+
+                    if (a > b)
+                    {
+                        int t = b; b = a; a = t;
+                    }
+
+                    b -= a;
+                } while (b != 0);
+            }
+             
             watch.Stop();
-            time = watch.Elapsed.TotalMilliseconds;
-            return b * k;
+            time = watch.Elapsed.Ticks;
+            return a << k;
         }
 
         /// <summary>
@@ -134,7 +148,7 @@ namespace Task1GCD
 
             watch.Stop();
 
-            time = watch.Elapsed.TotalMilliseconds;
+            time = watch.Elapsed.Ticks;
             return a;
         }
 

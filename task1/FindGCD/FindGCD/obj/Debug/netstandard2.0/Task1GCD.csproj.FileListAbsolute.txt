@@ -6,3 +6,11 @@ E:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.As
 E:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.dll
 E:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.pdb
 e:\epamTraining\Tasks\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.csprojAssemblyReference.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task1\FindGCD\FindGCD\bin\Debug\netstandard2.0\Task1GCD.deps.json
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task1\FindGCD\FindGCD\bin\Debug\netstandard2.0\Task1GCD.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task1\FindGCD\FindGCD\bin\Debug\netstandard2.0\Task1GCD.pdb
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.csprojAssemblyReference.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.AssemblyInfoInputs.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.AssemblyInfo.cs
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task1\FindGCD\FindGCD\obj\Debug\netstandard2.0\Task1GCD.pdb

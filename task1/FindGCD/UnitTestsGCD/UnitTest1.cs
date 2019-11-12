@@ -41,7 +41,7 @@ namespace UnitTestsGCD
         [TestMethod]
         public void TestGCD()
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 50; i++)
             {
                 a = random.Next(-12, 85);
                 b = random.Next(-5, 15);
@@ -64,14 +64,13 @@ namespace UnitTestsGCD
         [TestMethod]
         public void TestBinaryGCD()
         {
-            double time;
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 500; i++)
             {
-                a = random.Next(-100, 85);
-                b = random.Next(-25, 150);
+                a = random.Next(-10000, 85202);
+                b = random.Next(-25, 150154);
 
-                result = FindGCD.GetBinaryGCD(a, b, out time);
+                result = FindGCD.GetBinaryGCD(a, b);
 
                 if (Check(result, a, b))
                 {

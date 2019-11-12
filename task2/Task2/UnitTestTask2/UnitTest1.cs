@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestsTask2
+namespace UnitTestTask2
 {
     [TestClass]
     public class UnitTest1
@@ -8,6 +8,7 @@ namespace UnitTestsTask2
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }

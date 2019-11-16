@@ -194,21 +194,20 @@ namespace Task1GCD
         /// Method that prepares data (names and runtime for methods) for using
         /// </summary>
         /// <param name="data">Array of runtimes for each methods</param>
-        /// <param name="amount">Amount of methods</param>
         /// <returns>Array of method's names</returns>
-        public static string[] GetData(out double[] data, int amount)
+        public static string[] GetData(out double[] data)
         {
             double time;
-            string[] methodsName = new string[amount];
-            data = new double[amount];
+            string[] methodsName = new string[2];
+            data = new double[2];
 
             methodsName[0] = "GetGCD";
             methodsName[1] = "GetBinaryGCD";
 
-            GetGCD(5, 25, out time);
+            GetGCD(500, 25, out time);
             data[0] = time;
 
-            GetBinaryGCD(5, 25, out time);
+            GetBinaryGCD(500, 25, out time);
             data[1] = time;
 
             return methodsName;

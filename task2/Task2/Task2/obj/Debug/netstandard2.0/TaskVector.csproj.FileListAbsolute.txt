@@ -1,0 +1,8 @@
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Task2\bin\Debug\netstandard2.0\TaskVector.deps.json
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Task2\bin\Debug\netstandard2.0\TaskVector.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Task2\bin\Debug\netstandard2.0\TaskVector.pdb
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Task2\obj\Debug\netstandard2.0\TaskVector.csprojAssemblyReference.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Task2\obj\Debug\netstandard2.0\TaskVector.AssemblyInfoInputs.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Task2\obj\Debug\netstandard2.0\TaskVector.AssemblyInfo.cs
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Task2\obj\Debug\netstandard2.0\TaskVector.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Task2\obj\Debug\netstandard2.0\TaskVector.pdb

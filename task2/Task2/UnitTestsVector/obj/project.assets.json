@@ -6822,9 +6822,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\UnitTestsVector\\UnitTestsVector.csproj",
-      "projectName": "UnitTestsVector",
-      "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\UnitTestsVector\\UnitTestsVector.csproj",
+      "projectUniqueName": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\UnitTestsVector\\UnitTestsTask2.csproj",
+      "projectName": "UnitTestsTask2",
+      "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\UnitTestsVector\\UnitTestsTask2.csproj",
       "packagesPath": "C:\\Users\\Настя\\.nuget\\packages\\",
       "outputPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\UnitTestsVector\\obj\\",
       "projectStyle": "PackageReference",

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskVector", "Task2\TaskVector.csproj", "{59E0F2BA-08C5-426C-9F7A-FA5A8BD68588}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestsVector", "UnitTestsVector\UnitTestsVector.csproj", "{F60922D3-3743-4910-80C8-17BA4CE164D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestsTask2", "UnitTestsVector\UnitTestsTask2.csproj", "{F60922D3-3743-4910-80C8-17BA4CE164D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

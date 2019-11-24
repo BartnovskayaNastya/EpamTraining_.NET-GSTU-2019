@@ -1,0 +1,8 @@
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Polynom\bin\Debug\netstandard2.0\TaskPolynom.deps.json
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Polynom\bin\Debug\netstandard2.0\TaskPolynom.dll
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Polynom\bin\Debug\netstandard2.0\TaskPolynom.pdb
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Polynom\obj\Debug\netstandard2.0\TaskPolynom.csprojAssemblyReference.cache
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Polynom\obj\Debug\netstandard2.0\TaskPolynom.AssemblyInfoInputs.cache
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Polynom\obj\Debug\netstandard2.0\TaskPolynom.AssemblyInfo.cs
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Polynom\obj\Debug\netstandard2.0\TaskPolynom.dll
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\Polynom\obj\Debug\netstandard2.0\TaskPolynom.pdb

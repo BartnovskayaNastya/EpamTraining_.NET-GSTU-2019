@@ -6,7 +6,7 @@ namespace UnitTestsTask2
 
 {
     [TestClass]
-    public class UnitTestTask2
+    public class UnitTestVector
     {
         private Vector3 CheckVectorOnNumber(Vector3 v1, float a)
         {
@@ -58,5 +58,6 @@ namespace UnitTestsTask2
             Assert.AreEqual(5604, scalarResult);
 
         }
+
     }
 }

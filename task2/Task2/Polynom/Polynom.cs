@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Polynom
+namespace TaskPolynom
 {
     public class Polynom
     {
-        int Degrees
+        public int Degrees
         {
             get { return Degrees; }
             set
@@ -16,14 +16,14 @@ namespace Polynom
             }
         }
 
-        int[] coefficients;
-        int freeMember;
+        public int[] Coefficients { get;}
+        public int FreeMember { get; }
 
         public Polynom(int degrees, int freeMember, int []coefficients)
         {
             this.Degrees = degrees;
-            this.freeMember = freeMember;
-            this.coefficients = coefficients;
+            this.FreeMember = freeMember;
+            this.Coefficients = coefficients;
 
         }
 
@@ -56,7 +56,7 @@ namespace Polynom
                     while(i < difference)
                     {
 
-                        coefficients[i] = p1.coefficients[i];
+                        coefficients[i] = p1.Coefficients[i];
                         i++;
                     }
 
@@ -66,15 +66,15 @@ namespace Polynom
                     while (i < difference && i < difference)
                     {
 
-                        coefficients[i] = p2.coefficients[i];
+                        coefficients[i] = p2.Coefficients[i];
                         i++;
                     }
                 }
 
-                coefficients[i] = p1.coefficients[i] + p2.coefficients[i];
+                coefficients[i] = p1.Coefficients[i] + p2.Coefficients[i];
             }
 
-            freeMember = p1.freeMember + p2.freeMember;
+            freeMember = p1.FreeMember + p2.FreeMember;
 
             p3 = new Polynom(degrees, freeMember, coefficients);
             return p3;
@@ -108,7 +108,7 @@ namespace Polynom
                     while (i < difference)
                     {
 
-                        coefficients[i] = p1.coefficients[i];
+                        coefficients[i] = p1.Coefficients[i];
                         i++;
                     }
 
@@ -118,15 +118,15 @@ namespace Polynom
                     while (i < difference && i < difference)
                     {
 
-                        coefficients[i] = p2.coefficients[i];
+                        coefficients[i] = p2.Coefficients[i];
                         i++;
                     }
                 }
 
-                coefficients[i] = p1.coefficients[i] - p2.coefficients[i];
+                coefficients[i] = p1.Coefficients[i] - p2.Coefficients[i];
             }
 
-            freeMember = p1.freeMember - p2.freeMember;
+            freeMember = p1.FreeMember - p2.FreeMember;
 
             p3 = new Polynom(degrees, freeMember, coefficients);
             return p3;

@@ -11,6 +11,7 @@
           "MSTest.TestAdapter": "1.4.0",
           "MSTest.TestFramework": "1.4.0",
           "Microsoft.NET.Test.Sdk": "16.2.0",
+          "TaskPolynom": "1.0.0",
           "TaskVector": "1.0.0",
           "coverlet.collector": "1.0.1"
         },
@@ -1325,6 +1326,11 @@
           }
         }
       },
+      "TaskPolynom/1.0.0": {
+        "runtime": {
+          "TaskPolynom.dll": {}
+        }
+      },
       "TaskVector/1.0.0": {
         "runtime": {
           "TaskVector.dll": {}
@@ -2072,6 +2078,11 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "TaskPolynom/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "TaskVector/1.0.0": {
       "type": "project",

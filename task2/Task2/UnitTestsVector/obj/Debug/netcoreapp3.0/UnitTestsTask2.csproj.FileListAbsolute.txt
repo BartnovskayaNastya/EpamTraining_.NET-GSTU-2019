@@ -92,3 +92,5 @@ e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\UnitTestsVector\ob
 e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\UnitTestsVector\obj\Debug\netcoreapp3.0\UnitTestsTask2.csproj.CopyComplete
 e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\UnitTestsVector\obj\Debug\netcoreapp3.0\UnitTestsTask2.dll
 e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\UnitTestsVector\obj\Debug\netcoreapp3.0\UnitTestsTask2.pdb
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\UnitTestsVector\bin\Debug\netcoreapp3.0\TaskPolynom.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task2\Task2\UnitTestsVector\bin\Debug\netcoreapp3.0\TaskPolynom.pdb

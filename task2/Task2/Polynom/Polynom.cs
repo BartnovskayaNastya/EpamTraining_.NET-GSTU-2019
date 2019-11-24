@@ -4,14 +4,15 @@ namespace TaskPolynom
 {
     public class Polynom
     {
+        int degrees;
         public int Degrees
         {
-            get { return Degrees; }
+            get { return degrees; }
             set
             {
-                if(Degrees > 0)
+                if(degrees > 0)
                 {
-                    Degrees = value;
+                    degrees = value;
                 }
             }
         }
@@ -21,7 +22,7 @@ namespace TaskPolynom
 
         public Polynom(int degrees, int freeMember, int []coefficients)
         {
-            this.Degrees = degrees;
+            this.degrees = degrees;
             this.FreeMember = freeMember;
             this.Coefficients = coefficients;
 
@@ -36,7 +37,7 @@ namespace TaskPolynom
             bool flag;
             int difference = Math.Abs(p1.Degrees - p2.Degrees);
 
-            if (p1.Degrees > p2.Degrees)
+            if (p1.Degrees >= p2.Degrees)
             {
                 degrees = p1.Degrees;
                 flag = true;
@@ -51,9 +52,9 @@ namespace TaskPolynom
 
             for (int i = 0; i < degrees; i++)
             {
-                if (flag && i < difference)
+                if (flag && i <= difference)
                 {
-                    while(i < difference)
+                    while (i < difference)
                     {
 
                         coefficients[i] = p1.Coefficients[i];
@@ -63,7 +64,7 @@ namespace TaskPolynom
                 }
                 else
                 {
-                    while (i < difference && i < difference)
+                    while (i <= difference)
                     {
 
                         coefficients[i] = p2.Coefficients[i];
@@ -71,10 +72,17 @@ namespace TaskPolynom
                     }
                 }
 
-                coefficients[i] = p1.Coefficients[i] + p2.Coefficients[i];
+                if (flag)
+                {
+                    coefficients[i] = p1.Coefficients[i] + p2.Coefficients[i - difference];
+                }
+                else
+                {
+                    coefficients[i] = p1.Coefficients[i - difference] + p2.Coefficients[i];
+                }
             }
 
-            freeMember = p1.FreeMember + p2.FreeMember;
+                freeMember = p1.FreeMember + p2.FreeMember;
 
             p3 = new Polynom(degrees, freeMember, coefficients);
             return p3;
@@ -88,14 +96,32 @@ namespace TaskPolynom
             bool flag;
             int difference = Math.Abs(p1.Degrees - p2.Degrees);
 
-            if (p1.Degrees > p2.Degrees)
+
+            if (p1.Degrees >= p2.Degrees)
             {
                 degrees = p1.Degrees;
+
+                for (int i = 0; i < p2.Degrees; i++)
+                {
+                    if (p1.Coefficients[i] == p2.Coefficients[i])
+                    {
+                        degrees--;
+                    }
+                }
+
                 flag = true;
             }
             else
             {
                 degrees = p2.Degrees;
+
+                for (int i = 0; i < p1.Degrees; i++)
+                {
+                    if (p1.Coefficients[i] == p2.Coefficients[i])
+                    {
+                        degrees--;
+                    }
+                }
                 flag = false;
             }
 
@@ -103,7 +129,7 @@ namespace TaskPolynom
 
             for (int i = 0; i < degrees; i++)
             {
-                if (flag && i < difference)
+                if (flag && i <= difference)
                 {
                     while (i < difference)
                     {
@@ -115,15 +141,22 @@ namespace TaskPolynom
                 }
                 else
                 {
-                    while (i < difference && i < difference)
+                    while (i < difference)
                     {
 
-                        coefficients[i] = p2.Coefficients[i];
+                        coefficients[i] = -p2.Coefficients[i];
                         i++;
                     }
                 }
+                if (flag)
+                {
+                    coefficients[i] = p1.Coefficients[i] - p2.Coefficients[i - difference];
+                }
+                else
+                {
+                    coefficients[i] = p1.Coefficients[i - difference] - p2.Coefficients[i];
+                }
 
-                coefficients[i] = p1.Coefficients[i] - p2.Coefficients[i];
             }
 
             freeMember = p1.FreeMember - p2.FreeMember;
@@ -131,6 +164,7 @@ namespace TaskPolynom
             p3 = new Polynom(degrees, freeMember, coefficients);
             return p3;
         }
+
 
 
 

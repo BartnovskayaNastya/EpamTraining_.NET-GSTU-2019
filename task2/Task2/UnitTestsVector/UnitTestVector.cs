@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Task2Vector;
-
+using TaskPolynom;
 namespace UnitTestsTask2
 
 {
@@ -34,7 +34,7 @@ namespace UnitTestsTask2
             float scalarResult;
             Random random = new Random();
 
-            for(int i = 0; i < 50; i++)
+            for (int i = 0; i < 50; i++)
             {
                 v1 = new Vector3(random.Next(-1550, 1254), random.Next(-568, 2), random.Next(10, 154879));
                 v2 = new Vector3(random.Next(-10, 5000), random.Next(-788, 20), random.Next(100, 152139));
@@ -56,6 +56,22 @@ namespace UnitTestsTask2
 
             scalarResult = Vector3.ScalarMultiply(v1, v2);
             Assert.AreEqual(5604, scalarResult);
+
+        }
+
+        [TestMethod]
+        public void TestPolynom()
+        {
+            int[] nums1 = new int[2] { 1, 2};
+            int[] nums2 = new int[3] { 3, 5, 14 };
+            Polynom p1 = new Polynom(2, 10, nums1);
+            Polynom p2 = new Polynom(2, 18, nums2);
+
+            Polynom result;
+
+            result = p1 - p2;
+
+            Assert.IsTrue(p1 == result - p2);
 
         }
 

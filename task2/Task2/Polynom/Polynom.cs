@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TaskPolynom
 {
@@ -20,6 +21,12 @@ namespace TaskPolynom
         public int[] Coefficients { get;}
         public int FreeMember { get; }
 
+        /// <summary>
+        /// Constructor for polunom
+        /// </summary>
+        /// <param name="degrees"> Maximal degrees of polynom</param>
+        /// <param name="freeMember">Free member of polynom</param>
+        /// <param name="coefficients">Coefficients of polynom</param>
         public Polynom(int degrees, int freeMember, int []coefficients)
         {
             this.degrees = degrees;
@@ -28,7 +35,12 @@ namespace TaskPolynom
 
         }
 
-
+        /// <summary>
+        /// Method for addition polynoms
+        /// </summary>
+        /// <param name="p1">First polynom for addition</param>
+        /// <param name="p2">Second polynom for addition</param>
+        /// <returns>New polynom - result of addition first and second polunoms</returns>
         public static Polynom operator + (Polynom p1, Polynom p2)
         {
             int degrees;
@@ -36,7 +48,7 @@ namespace TaskPolynom
             Polynom p3;
             bool flag;
             int difference = Math.Abs(p1.Degrees - p2.Degrees);
-
+           
             if (p1.Degrees >= p2.Degrees)
             {
                 degrees = p1.Degrees;
@@ -64,7 +76,7 @@ namespace TaskPolynom
                 }
                 else
                 {
-                    while (i <= difference)
+                    while (i < difference)
                     {
 
                         coefficients[i] = p2.Coefficients[i];
@@ -81,13 +93,20 @@ namespace TaskPolynom
                     coefficients[i] = p1.Coefficients[i - difference] + p2.Coefficients[i];
                 }
             }
-
+            
                 freeMember = p1.FreeMember + p2.FreeMember;
-
+            
             p3 = new Polynom(degrees, freeMember, coefficients);
             return p3;
         }
 
+
+        /// <summary>
+        /// Method for subtruction polynoms
+        /// </summary>
+        /// <param name="p1">First polynom fot subtruction</param>
+        /// <param name="p2">Second polynom for subtruction</param>
+        /// <returns>New polynom - result of subtruction first and second polynoms</returns>
         public static Polynom operator -(Polynom p1, Polynom p2)
         {
             int degrees;
@@ -163,6 +182,28 @@ namespace TaskPolynom
 
             p3 = new Polynom(degrees, freeMember, coefficients);
             return p3;
+        }
+
+        /// <summary>
+        /// Method for product of polynoms
+        /// </summary>
+        /// <param name="p1">First polynom for product</param>
+        /// <param name="p2">Second polynom for product</param>
+        /// <returns>New polynom - result of product first and second polynom</returns>
+        public static Polynom operator *(Polynom p1, Polynom p2)
+        {
+            int degrees;
+            int freeMember;
+            bool flag;
+
+            for (int i = 0; i < p1.Degrees; i++)
+            {
+                for (int j = 0; j < p2.Degrees; j++)
+                {
+
+                }
+
+            }
         }
 
 

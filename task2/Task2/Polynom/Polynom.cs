@@ -35,6 +35,11 @@ namespace TaskPolynom
 
         }
 
+        public Polynom(int[] coefficients)
+        {
+            this.Coefficients = coefficients;
+
+        }
         /// <summary>
         /// Method for addition polynoms
         /// </summary>
@@ -183,30 +188,6 @@ namespace TaskPolynom
             p3 = new Polynom(degrees, freeMember, coefficients);
             return p3;
         }
-
-        /// <summary>
-        /// Method for product of polynoms
-        /// </summary>
-        /// <param name="p1">First polynom for product</param>
-        /// <param name="p2">Second polynom for product</param>
-        /// <returns>New polynom - result of product first and second polynom</returns>
-        public static Polynom operator *(Polynom p1, Polynom p2)
-        {
-            int degrees;
-            int freeMember;
-            bool flag;
-
-            for (int i = 0; i < p1.Degrees; i++)
-            {
-                for (int j = 0; j < p2.Degrees; j++)
-                {
-
-                }
-
-            }
-        }
-
-
 
 
     }

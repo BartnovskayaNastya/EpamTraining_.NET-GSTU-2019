@@ -2030,6 +2030,16 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "Polynom/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Polynom.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Polynom.dll": {}
+        }
+      },
       "TaskVector/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -6800,6 +6810,11 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "Polynom/1.0.0": {
+      "type": "project",
+      "path": "../Polynom/Polynom.csproj",
+      "msbuildProject": "../Polynom/Polynom.csproj"
+    },
     "TaskVector/1.0.0": {
       "type": "project",
       "path": "../Task2/TaskVector.csproj",
@@ -6811,6 +6826,7 @@
       "MSTest.TestAdapter >= 1.4.0",
       "MSTest.TestFramework >= 1.4.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
+      "Polynom >= 1.0.0",
       "TaskVector >= 1.0.0",
       "coverlet.collector >= 1.0.1"
     ]
@@ -6845,6 +6861,9 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
+            "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\Polynom\\Polynom.csproj": {
+              "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\Polynom\\Polynom.csproj"
+            },
             "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\Task2\\TaskVector.csproj": {
               "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task2\\Task2\\Task2\\TaskVector.csproj"
             }

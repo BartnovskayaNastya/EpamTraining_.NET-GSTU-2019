@@ -6,7 +6,7 @@ namespace UnitTestsTask2
 
 {
     [TestClass]
-    public class UnitTestVector3
+    public class UnitTestTask2
     {
         private Vector3 CheckVectorOnNumber(Vector3 v1, float a)
         {
@@ -25,7 +25,7 @@ namespace UnitTestsTask2
 
 
         [TestMethod]
-        public void TestMethod()
+        public void TestVector()
         {
 
             Vector3 v1;

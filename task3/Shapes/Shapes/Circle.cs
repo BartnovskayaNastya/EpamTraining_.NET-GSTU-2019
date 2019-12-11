@@ -4,11 +4,26 @@ using System.Text;
 
 namespace Shapes
 {
-    class Circle : Figure
+    public class Circle : Figure
     {
-        public override float GetP()
-        {
+        private Point center;
+        private int r;
 
+        public Circle(params Point[] points) : base (points)
+        {
+            center = points[0];
+            r = points[1].X;
         }
+
+        public override double GetP()
+        {
+            return 2 * Math.PI * r;
+        }
+
+        public override double GetS()
+        {
+            return Math.PI * Math.Pow(r, 2);
+        }
+
     }
 }

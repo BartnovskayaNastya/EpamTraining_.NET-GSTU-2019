@@ -4,9 +4,15 @@ namespace Shapes
 {
     public abstract class Figure
     {
+        public Point[] points;
 
-        public abstract float GetP();
-        public abstract float GetS();
+        public Figure(params Point[] points)
+        {
+            this.points = points;
+        }
+
+        public abstract double GetP();
+        public abstract double GetS();
 
     }
 }

@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Shapes
 {
-    class Triangle : Figure
+    public abstract class Triangle : Figure
     {
         private int a;
         private int b;
         private int c;
 
-        public Triangle(params Point[] points): base(points) 
+        public Triangle(Material material, params Point[] points) : base(material, points) 
         {
             a = points[0].X;
             b = points[0].Y;

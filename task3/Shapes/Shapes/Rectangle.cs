@@ -9,7 +9,7 @@ namespace Shapes
         int width;
         int height;
 
-        public Rectangle(params Point[] points) : base(points)
+        public Rectangle(Material material, params Point[] points) : base(material, points)
         {
             height = points[0].X;
             width = points[0].Y;

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Shapes
 {
-    public class Circle : Figure
+    public abstract class Circle : Figure
     {
         private Point center;
         private int r;
 
-        public Circle(params Point[] points) : base (points)
+        public Circle(Material material, params Point[] points) : base(material, points)
         {
             center = points[0];
             r = points[1].X;

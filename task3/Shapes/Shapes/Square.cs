@@ -8,7 +8,7 @@ namespace Shapes
     {
         private int size;
 
-        public Square(params Point[] points) : base(points)
+        public Square(Material material, params Point[] points) : base(material, points)
         {
             size = points[0].X;
         }

@@ -25,26 +25,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "BoxExceptions/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/BoxExceptions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BoxExceptions.dll": {}
-        }
-      },
-      "Shapes/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/Shapes.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shapes.dll": {}
-        }
       }
     }
   },
@@ -191,23 +171,11 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "BoxExceptions/1.0.0": {
-      "type": "project",
-      "path": "../BoxExceptions/BoxExceptions.csproj",
-      "msbuildProject": "../BoxExceptions/BoxExceptions.csproj"
-    },
-    "Shapes/1.0.0": {
-      "type": "project",
-      "path": "../Shapes/Shapes.csproj",
-      "msbuildProject": "../Shapes/Shapes.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "BoxExceptions >= 1.0.0",
-      "NETStandard.Library >= 2.0.3",
-      "Shapes >= 1.0.0"
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -217,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Box\\Box.csproj",
-      "projectName": "Box",
-      "projectPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Box\\Box.csproj",
+      "projectUniqueName": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\BoxExceptions\\BoxExceptions.csproj",
+      "projectName": "BoxExceptions",
+      "projectPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\BoxExceptions\\BoxExceptions.csproj",
       "packagesPath": "C:\\Users\\Настя\\.nuget\\packages\\",
-      "outputPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Box\\obj\\",
+      "outputPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\BoxExceptions\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -239,14 +207,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\BoxExceptions\\BoxExceptions.csproj": {
-              "projectPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\BoxExceptions\\BoxExceptions.csproj"
-            },
-            "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Shapes.csproj": {
-              "projectPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Shapes.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -17,6 +17,7 @@ namespace Shapes
             c = points[1].X;
         }
 
+
         public override double GetP()
         {
             return a + b + c;
@@ -46,6 +47,14 @@ namespace Shapes
                    c == triangle.c;
         }
 
+        public bool Equals(Triangle obj)
+        {
+            if (obj == null)
+                return false;
+
+            return obj.a == this.a && obj.b == this.b && obj.c == this.c;
+        }
+
         public override int GetHashCode()
         {
             var hashCode = 1861068769;
@@ -58,7 +67,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return "Triangle: side A - " + a + " side B - " + b + " side C - " + c;
+            return "Triangle: side A - " + a + " side B - " + b + " side C - " + c + "\n"; 
         }
 
     }

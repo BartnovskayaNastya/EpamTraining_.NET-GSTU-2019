@@ -36,6 +36,14 @@ namespace Shapes
                    height == rectangle.height;
         }
 
+        public bool Equals(Rectangle obj)
+        {
+            if (obj == null)
+                return false;
+
+            return obj.width == this.width && obj.height == this.height;
+        }
+
         public override int GetHashCode()
         {
             var hashCode = 1694380351;
@@ -43,6 +51,11 @@ namespace Shapes
             hashCode = hashCode * -1521134295 + width.GetHashCode();
             hashCode = hashCode * -1521134295 + height.GetHashCode();
             return hashCode;
+        }
+
+        public override string ToString()
+        {
+            return "Rectangle: side A - " + width + " side B - " + height +  "\n";
         }
     }
 }

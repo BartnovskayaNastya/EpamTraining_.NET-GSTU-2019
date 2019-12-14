@@ -1,0 +1,11 @@
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\bin\Debug\netstandard2.0\Box.deps.json
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\bin\Debug\netstandard2.0\Box.dll
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\bin\Debug\netstandard2.0\Box.pdb
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\bin\Debug\netstandard2.0\Shapes.dll
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\bin\Debug\netstandard2.0\Shapes.pdb
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\obj\Debug\netstandard2.0\Box.csprojAssemblyReference.cache
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\obj\Debug\netstandard2.0\Box.AssemblyInfoInputs.cache
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\obj\Debug\netstandard2.0\Box.AssemblyInfo.cs
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\obj\Debug\netstandard2.0\Box.csproj.CopyComplete
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\obj\Debug\netstandard2.0\Box.dll
+E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\obj\Debug\netstandard2.0\Box.pdb

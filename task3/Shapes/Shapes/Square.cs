@@ -32,12 +32,25 @@ namespace Shapes
                    size == square.size;
         }
 
+        public bool Equals(Square obj)
+        {
+            if (obj == null)
+                return false;
+
+            return obj.size == this.size;
+        }
+
         public override int GetHashCode()
         {
             var hashCode = 1221766130;
             hashCode = hashCode * -1521134295 + base.GetHashCode();
             hashCode = hashCode * -1521134295 + size.GetHashCode();
             return hashCode;
+        }
+
+        public override string ToString()
+        {
+            return "Square: side  - " + size + "\n";
         }
 
     }

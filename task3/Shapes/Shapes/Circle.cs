@@ -13,6 +13,7 @@ namespace Shapes
             r = points[1].X;
         }
 
+
         public override double GetP()
         {
             return 2 * Math.PI * r;
@@ -33,6 +34,13 @@ namespace Shapes
                    r == circle.r;
         }
 
+        public bool Equals(Circle obj)
+        {
+            if (obj == null)
+                return false;
+
+            return obj.r == this.r;
+        }
         public override int GetHashCode()
         {
             var hashCode = 1523293247;
@@ -43,7 +51,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return "Circle: radius - " + r;
+            return "Circle: radius - " + r + "\n";
         }
 
     }

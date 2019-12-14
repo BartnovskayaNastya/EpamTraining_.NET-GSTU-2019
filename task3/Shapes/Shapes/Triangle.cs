@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shapes
 {
-    public abstract class Triangle : Figure
+    public class Triangle : Figure
     {
         private int a;
         private int b;
@@ -16,6 +16,7 @@ namespace Shapes
             b = points[0].Y;
             c = points[1].X;
         }
+
         public override double GetP()
         {
             return a + b + c;
@@ -33,6 +34,32 @@ namespace Shapes
                 return Math.Sqrt(GetP() / 2 * ((GetP() / 2) - a) * ((GetP() / 2) - b) * ((GetP() / 2) - c));
             }
         }
-        
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || obj.GetType() != this.GetType())
+                return false;
+            return obj is Triangle triangle &&
+                   base.Equals(obj) &&
+                   a == triangle.a &&
+                   b == triangle.b &&
+                   c == triangle.c;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1861068769;
+            hashCode = hashCode * -1521134295 + base.GetHashCode();
+            hashCode = hashCode * -1521134295 + a.GetHashCode();
+            hashCode = hashCode * -1521134295 + b.GetHashCode();
+            hashCode = hashCode * -1521134295 + c.GetHashCode();
+            return hashCode;
+        }
+
+        public override string ToString()
+        {
+            return "Triangle: side A - " + a + " side B - " + b + " side C - " + c;
+        }
+
     }
 }

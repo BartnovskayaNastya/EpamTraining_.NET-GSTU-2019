@@ -23,6 +23,22 @@ namespace Shapes
             return size * size;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null || obj.GetType() != this.GetType())
+                return false;
+            return obj is Square square &&
+                   base.Equals(obj) &&
+                   size == square.size;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1221766130;
+            hashCode = hashCode * -1521134295 + base.GetHashCode();
+            hashCode = hashCode * -1521134295 + size.GetHashCode();
+            return hashCode;
+        }
 
     }
 }

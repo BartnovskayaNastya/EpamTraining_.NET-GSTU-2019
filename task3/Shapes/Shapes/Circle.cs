@@ -4,14 +4,12 @@ using System.Text;
 
 namespace Shapes
 {
-    public abstract class Circle : Figure
+    public class Circle : Figure
     {
-        private Point center;
         private int r;
 
         public Circle(Material material, params Point[] points) : base(material, points)
         {
-            center = points[0];
             r = points[1].X;
         }
 
@@ -23,6 +21,29 @@ namespace Shapes
         public override double GetS()
         {
             return Math.PI * Math.Pow(r, 2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || obj.GetType() != this.GetType())
+                return false;
+
+            return obj is Circle circle &&
+                   base.Equals(obj) &&
+                   r == circle.r;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1523293247;
+            hashCode = hashCode * -1521134295 + base.GetHashCode();
+            hashCode = hashCode * -1521134295 + r.GetHashCode();
+            return hashCode;
+        }
+
+        public override string ToString()
+        {
+            return "Circle: radius - " + r;
         }
 
     }

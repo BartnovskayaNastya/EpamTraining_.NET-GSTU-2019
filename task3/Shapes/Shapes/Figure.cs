@@ -7,11 +7,12 @@ namespace Shapes
     {
         private Point[] points;
         private bool isPainted = false;
-        Material Material { get; set; }
+        public Material Material { get; private set; }
         Color Color 
         {
             get { return Color;}
-            set { isPainted = true;} 
+            set { Color = value;
+                isPainted = true;} 
         }
 
         public Figure(Material material, params Point[] points)

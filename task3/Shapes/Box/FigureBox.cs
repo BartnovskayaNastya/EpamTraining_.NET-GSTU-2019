@@ -13,6 +13,22 @@ namespace Box
         {
         }
 
+        private void CheckException(int number = 3)
+        {
+            if (box.Count == 0)
+            {
+                throw new EmptyBoxException();
+            }
+            if (number > box.Count)
+            {
+                throw new InvalidNumberException(box.Count);
+            }
+            if (number <= 0)
+            {
+                throw new NegativeNumberException();
+            }
+        }
+
         public void AddFigure(Figure figure, Material material)
         {
             if (box.Count == 20)
@@ -24,7 +40,7 @@ namespace Box
             {
                 if (figure.Equals(someFigure))
                 {
-                    throw new Exception("You can't make this figure, becouse she already exists");
+                    throw new ExistsFigureException();
                 }
             }
 
@@ -33,14 +49,7 @@ namespace Box
 
         public void FindByNumber(int number)
         {
-            if (number > box.Count)
-            {
-                throw new Exception("There is no figure by this number. The amount of figures is " + box.Count);
-            }
-            if (number <= 0)
-            {
-                throw new Exception("You need to input positive number");
-            }
+            CheckException(number);
 
             for (int i = 0; i < box.Count; i++)
             {
@@ -54,28 +63,14 @@ namespace Box
 
         public void RemoveByIndex(int index)
         {
-            if (index > box.Count)
-            {
-                throw new Exception("There is no figure by this number. The amount of figures is " + box.Count);
-            }
-            if (index <= 0)
-            {
-                throw new Exception("You need to input positive number");
-            }
+            CheckException(index);
             box.RemoveAt(index - 1);
 
         }
 
         public void ChangeByNumber(int number, Figure figure)
         {
-            if (number > box.Count)
-            {
-                throw new Exception("There is no figure by this number. The amount of figures is " + box.Count);
-            }
-            if (number <= 0)
-            {
-                throw new Exception("You need to input positive number");
-            }
+            CheckException(number);
 
             box.Insert(number - 1, figure);
 
@@ -83,13 +78,18 @@ namespace Box
 
         public void FindFigure(Figure figure)
         {
+            bool flag = false;
             foreach (Figure someFigure in box)
             {
                 if (figure.Equals(someFigure))
                 {
+                    flag = true;
                     figure.ToString();
                 }
             }
+
+            if (flag == false)
+                throw new Exception("There is no figure"); 
         }
 
         public void ShowExistsFigures()
@@ -102,6 +102,7 @@ namespace Box
 
         public double GetPFigures()
         {
+            CheckException();
             double result = 0;
             foreach (Figure someFigure in box)
             {
@@ -113,6 +114,7 @@ namespace Box
 
         public double GetSFigures()
         {
+            CheckException();
             double result = 0;
             foreach (Figure someFigure in box)
             {
@@ -122,15 +124,24 @@ namespace Box
             return result;
         }
 
-        public double GetSFigures()
+        public void RemoveAllCircles()
         {
-            double result = 0;
-            foreach (Figure someFigure in box)
+            foreach (Figure someFigure in box.ToArray())
             {
-                result += someFigure.GetS();
+                if(someFigure is Circle)
+                    box.Remove(someFigure);
             }
 
-            return result;
+        }
+
+        public void RemoveAllFilmFigures()
+        {
+            foreach (Figure someFigure in box.ToArray())
+            {
+                if (someFigure.Material == Material.Film)
+                    box.Remove(someFigure);
+            }
+
         }
 
     }

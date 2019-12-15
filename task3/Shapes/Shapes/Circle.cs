@@ -7,22 +7,29 @@ namespace Shapes
     [Serializable]
     public class Circle : Figure
     {
-        private int r;
+        public int R { get; }
 
-        public Circle(Material material, params Point[] points) : base(material, points)
+        public Circle(Material material, params int[] points) : base(material, points)
         {
-            r = points[1].X;
+            R = points[0];
         }
 
+        public Circle(Figure figure)
+        {
+            if (figure.GetS() > GetS())
+            {
+                throw new Exception("You can't cut this shape");
+            }
+        }
 
         public override double GetP()
         {
-            return 2 * Math.PI * r;
+            return 2 * Math.PI * R;
         }
 
         public override double GetS()
         {
-            return Math.PI * Math.Pow(r, 2);
+            return Math.PI * Math.Pow(R, 2);
         }
 
         public override bool Equals(object obj)
@@ -32,7 +39,7 @@ namespace Shapes
 
             return obj is Circle circle &&
                    base.Equals(obj) &&
-                   r == circle.r;
+                   R == circle.R;
         }
 
         public bool Equals(Circle obj)
@@ -40,19 +47,19 @@ namespace Shapes
             if (obj == null)
                 return false;
 
-            return obj.r == this.r;
+            return obj.R == this.R;
         }
         public override int GetHashCode()
         {
             var hashCode = 1523293247;
             hashCode = hashCode * -1521134295 + base.GetHashCode();
-            hashCode = hashCode * -1521134295 + r.GetHashCode();
+            hashCode = hashCode * -1521134295 + R.GetHashCode();
             return hashCode;
         }
 
         public override string ToString()
         {
-            return "Circle: radius - " + r + "\n";
+            return "Circle: radius - " + R + "\n";
         }
 
     }

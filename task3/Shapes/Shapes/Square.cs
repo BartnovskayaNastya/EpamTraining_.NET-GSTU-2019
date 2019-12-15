@@ -9,11 +9,19 @@ namespace Shapes
     {
         private int size;
 
-        public Square(Material material, params Point[] points) : base(material, points)
+        public Square(Material material, params int[] points) : base(material, points)
         {
-            size = points[0].X;
+            size = points[0];
         }
 
+        public Square(Figure figure) 
+        {
+
+            if (figure.GetS() > GetS())
+            {
+                throw new Exception("You can't cut this shape");
+            }
+        }
         public override double GetP()
         {
             return 4 * size;

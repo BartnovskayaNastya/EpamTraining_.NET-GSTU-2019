@@ -10,10 +10,19 @@ namespace Shapes
         private int width;
         private int height;
 
-        public Rectangle(Material material, params Point[] points) : base(material, points)
+        public Rectangle(Material material, params int[] points) : base(material, points)
         {
-            height = points[0].X;
-            width = points[0].Y;
+            height = points[0];
+            width = points[1];
+        }
+
+        public Rectangle(Figure figure)
+        {
+
+            if (figure.GetS() > GetS())
+            {
+                throw new Exception("You can't cut this shape");
+            }
         }
 
         public override double GetP()

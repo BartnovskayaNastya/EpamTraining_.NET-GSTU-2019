@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using BoxExceptions;
 using Shapes;
 using System.Xml;
+using System.IO;
+using System.Xml.Serialization;
+using System.Text;
 
 namespace Box
 {
@@ -194,7 +197,8 @@ namespace Box
                     if (reader.HasAttributes)
                     {
                         figure.Material = (Material)Enum.Parse(typeof(Material), reader.GetAttribute("material"));
-                        if(figure.Material == Material.Paper)
+                        reader.MoveToNextAttribute();
+                        if(reader.Name == "color")
                         {
                             figure.Color = (Color)Enum.Parse(typeof(Color), reader.GetAttribute("color"));
                         }
@@ -207,6 +211,31 @@ namespace Box
             return figures;
         }
 
+
+        //private XmlDocument LoadDocument(string filePath)
+        //{
+        //    XmlDocument document = new XmlDocument();
+        //    using (StreamReader stream = new StreamReader(filePath))
+        //    {
+        //        document.Load(stream);
+
+        //    }
+        //    return (document);
+        //}
+
+        //private XmlDocument SaveDocument(XmlDocument document, string filePath)
+        //{
+        //    using (StreamWriter stream = new StreamWriter(filePath))
+        //    {
+        //        document.Save(stream);
+        //    }
+        //    return (document);
+        //}
+
+        //public void SaveFileStreamWriter(string filePath)
+        //{
+            
+        //}
 
 
 

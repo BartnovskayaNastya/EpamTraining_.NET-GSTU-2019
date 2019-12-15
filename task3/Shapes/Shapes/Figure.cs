@@ -6,7 +6,7 @@ namespace Shapes
     [Serializable]
     public abstract class Figure : IMaterial
     {
-        private Point[] points;
+        private int[] points;
         public bool isPainted = false;
         public Material Material { get; set; }
         public Color Color 
@@ -16,7 +16,7 @@ namespace Shapes
                 isPainted = true;} 
         }
 
-        public Figure(Material material, params Point[] points)
+        public Figure(Material material = Material.Film, params int[] points)
         {
             Material = material;
             this.points = points;
@@ -39,8 +39,11 @@ namespace Shapes
             {
                 throw new Exception("You can't paint this type of figure (Film figure)");
             }
-
-            Color = color;
+            if (isPainted == false)
+            {
+                Color = color;
+            }
+                
         }
 
         public abstract double GetP();
@@ -51,7 +54,7 @@ namespace Shapes
             if (obj == null || obj.GetType() != this.GetType())
                 return false;
                 return obj is Figure figure &&
-                   EqualityComparer<Point[]>.Default.Equals(points, figure.points) &&
+                   EqualityComparer<int[]>.Default.Equals(points, figure.points) &&
                    isPainted == figure.isPainted &&
                    Material == figure.Material;
         }
@@ -67,7 +70,7 @@ namespace Shapes
         public override int GetHashCode()
         {
             var hashCode = 1155158392;
-            hashCode = hashCode * -1521134295 + EqualityComparer<Point[]>.Default.GetHashCode(points);
+            hashCode = hashCode * -1521134295 + EqualityComparer<int[]>.Default.GetHashCode(points);
             hashCode = hashCode * -1521134295 + isPainted.GetHashCode();
             hashCode = hashCode * -1521134295 + Material.GetHashCode();
             return hashCode;

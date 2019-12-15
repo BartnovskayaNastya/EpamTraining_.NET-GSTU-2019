@@ -1,0 +1,8 @@
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\BoxExceptions\bin\Debug\netstandard2.0\BoxExceptions.deps.json
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\BoxExceptions\bin\Debug\netstandard2.0\BoxExceptions.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\BoxExceptions\bin\Debug\netstandard2.0\BoxExceptions.pdb
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\BoxExceptions\obj\Debug\netstandard2.0\BoxExceptions.csprojAssemblyReference.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\BoxExceptions\obj\Debug\netstandard2.0\BoxExceptions.AssemblyInfoInputs.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\BoxExceptions\obj\Debug\netstandard2.0\BoxExceptions.AssemblyInfo.cs
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\BoxExceptions\obj\Debug\netstandard2.0\BoxExceptions.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\BoxExceptions\obj\Debug\netstandard2.0\BoxExceptions.pdb

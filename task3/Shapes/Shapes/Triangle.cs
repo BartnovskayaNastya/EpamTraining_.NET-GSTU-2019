@@ -11,11 +11,19 @@ namespace Shapes
         private int b;
         private int c;
 
-        public Triangle(Material material, params Point[] points) : base(material, points) 
+        public Triangle(Material material, params int[] points) : base(material, points) 
         {
-            a = points[0].X;
-            b = points[0].Y;
-            c = points[1].X;
+            a = points[0];
+            b = points[1];
+            c = points[2];
+        }
+
+        public Triangle(Figure figure)
+        {
+            if (figure.GetS() > GetS())
+            {
+                throw new Exception("You can't cut this shape");
+            }
         }
 
 

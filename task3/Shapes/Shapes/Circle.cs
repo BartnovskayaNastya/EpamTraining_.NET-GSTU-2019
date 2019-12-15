@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Shapes
 {
+    [Serializable]
     public class Circle : Figure
     {
         private int r;

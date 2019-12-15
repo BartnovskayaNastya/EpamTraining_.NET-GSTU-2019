@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Shapes
 {
+    [Serializable]
     public class Rectangle : Figure
     {
         private int width;

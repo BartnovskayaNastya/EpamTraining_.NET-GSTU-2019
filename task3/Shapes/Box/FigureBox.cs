@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using BoxExceptions;
 using Shapes;
+using System.Xml;
 
 namespace Box
 {
     public class FigureBox
     {
-        List<Figure> box = new List<Figure>(20);
+        public List<Figure> box = new List<Figure>(20);
 
         public FigureBox()
         {
         }
+
+        
 
         private void CheckException(int number = 3)
         {
@@ -143,6 +146,70 @@ namespace Box
             }
 
         }
+
+        public void SaveFigures(List<Figure> figures, string filePath)
+        {
+            XmlWriter writer = XmlWriter.Create(filePath);
+
+            writer.WriteStartDocument();
+            writer.WriteStartElement("figures");
+
+            foreach (Figure item in figures)
+            {
+                writer.WriteStartElement("figure");
+                writer.WriteStartElement(Figure.GetFigureType(item));
+                writer.WriteAttributeString("material", Figure.GetFigureMaterial(item));
+                if(item.Material == Material.Paper && item.isPainted == true)
+                {
+                    writer.WriteAttributeString("color", item.Color.ToString());
+                }
+                writer.WriteEndElement();
+
+            }
+            writer.WriteEndDocument();
+            writer.Close();
+        }
+
+        public List<Figure> GetFilmFigures()
+        {
+            List<Figure> paperFigures = new List<Figure>();
+            foreach (Figure someFigure in box)
+            {
+                if (someFigure.Material == Material.Film)
+                    paperFigures.Add(someFigure);
+            }
+            return paperFigures;
+        }
+
+        public List<Figure> GetFiguresFromFile(string filePath)
+        {
+            List<Figure> figures = new List<Figure>();
+            Figure figure = null;
+
+            XmlReader reader = XmlReader.Create(filePath);
+            while (reader.Read())
+            {
+                if((reader.NodeType == XmlNodeType.Element) && ((reader.Name == "Circle") || (reader.Name == "Triangle") || (reader.Name == "Rectangle") || (reader.Name == "Square")))
+                {
+                    if (reader.HasAttributes)
+                    {
+                        figure.Material = (Material)Enum.Parse(typeof(Material), reader.GetAttribute("material"));
+                        if(figure.Material == Material.Paper)
+                        {
+                            figure.Color = (Color)Enum.Parse(typeof(Color), reader.GetAttribute("color"));
+                        }
+                    }
+                }
+
+                figures.Add(figure);
+            }
+
+            return figures;
+        }
+
+
+
+
 
     }
 }

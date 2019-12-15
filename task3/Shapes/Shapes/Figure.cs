@@ -3,12 +3,13 @@ using System.Collections.Generic;
 
 namespace Shapes
 {
+    [Serializable]
     public abstract class Figure : IMaterial
     {
         private Point[] points;
-        private bool isPainted = false;
-        public Material Material { get; private set; }
-        Color Color 
+        public bool isPainted = false;
+        public Material Material { get; set; }
+        public Color Color 
         {
             get { return Color;}
             set { Color = value;
@@ -19,6 +20,16 @@ namespace Shapes
         {
             Material = material;
             this.points = points;
+        }
+
+        public static string GetFigureType(Figure figure)
+        {
+            return figure.GetType().ToString();
+        }
+
+        public static string GetFigureMaterial(Figure figure)
+        {
+            return figure.Material.ToString();
         }
 
 

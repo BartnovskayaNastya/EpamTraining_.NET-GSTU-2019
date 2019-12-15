@@ -11,15 +11,27 @@ namespace Box
 {
     public class FigureBox
     {
+        /// <summary>
+        /// List for figures in box
+        /// </summary>
         public List<Figure> box = new List<Figure>(20);
 
+        /// <summary>
+        /// Constructor for box
+        /// </summary>
         public FigureBox()
         {
         }
 
-        
-
-        private void CheckException(int number = 3)
+        public  int GetCount()
+        {
+            return box.Count;
+        }
+        /// <summary>
+        /// Method for cheaking exception
+        /// </summary>
+        /// <param name="number">Optional parametr for methods of FindByNumber and RemoveByIndex</param>
+        private void CheckException(int number)
         {
             if (box.Count == 0)
             {
@@ -35,7 +47,11 @@ namespace Box
             }
         }
 
-        public void AddFigure(Figure figure, Material material)
+        /// <summary>
+        /// Method for adding figure in box
+        /// </summary>
+        /// <param name="figure">Type of figure for adding</param>
+        public void AddFigure(Figure figure)
         {
             if (box.Count == 20)
             {
@@ -44,7 +60,7 @@ namespace Box
 
             foreach (Figure someFigure in box)
             {
-                if (figure.Equals(someFigure))
+                if (someFigure.Equals(figure))
                 {
                     throw new ExistsFigureException();
                 }
@@ -53,7 +69,11 @@ namespace Box
             box.Add(figure);
         }
 
-        public void FindByNumber(int number)
+        /// <summary>
+        /// Method for finding figure by number
+        /// </summary>
+        /// <param name="number">Number of figure for finding figure by number</param>
+        public Figure FindByNumber(int number)
         {
             CheckException(number);
 
@@ -61,12 +81,17 @@ namespace Box
             {
                 if (i == number - 1)
                 {
-                    box[i].ToString();
+                   return box[i];
                 }
             }
+            return null;
 
         }
 
+        /// <summary>
+        /// Method for removing figure by number
+        /// </summary>
+        /// <param name="index">Number of figure for removing figure by number</param>
         public void RemoveByIndex(int index)
         {
             CheckException(index);
@@ -74,6 +99,11 @@ namespace Box
 
         }
 
+        /// <summary>
+        /// Method for changing figure by number
+        /// </summary>
+        /// <param name="number">Number of figure for changing</param>
+        /// <param name="figure">Figure for changing</param>
         public void ChangeByNumber(int number, Figure figure)
         {
             CheckException(number);
@@ -82,7 +112,11 @@ namespace Box
 
         }
 
-        public void FindFigure(Figure figure)
+        /// <summary>
+        /// Method for finding figure similar to anouther figure
+        /// </summary>
+        /// <param name="figure">Figure for sample</param>
+        public Figure FindFigure(Figure figure)
         {
             bool flag = false;
             foreach (Figure someFigure in box)
@@ -90,14 +124,17 @@ namespace Box
                 if (figure.Equals(someFigure))
                 {
                     flag = true;
-                    figure.ToString();
+                    return figure;
                 }
             }
-
             if (flag == false)
-                throw new Exception("There is no figure"); 
+                throw new Exception("There is no figure");
+            return null;
         }
 
+        /// <summary>
+        /// Method for showing exists figures
+        /// </summary>
         public void ShowExistsFigures()
         {
             foreach (Figure someFigure in box)
@@ -106,9 +143,17 @@ namespace Box
             }
         }
 
+        /// <summary>
+        /// Method for getting sum of all figures by perimetr
+        /// </summary>
+        /// <returns>Sum of all figures by perimetr</returns>
         public double GetPFigures()
         {
-            CheckException();
+            if(box.Count < 1)
+            {
+                throw new Exception("There is no figures in box");
+            }
+
             double result = 0;
             foreach (Figure someFigure in box)
             {
@@ -118,9 +163,17 @@ namespace Box
             return result;
         }
 
+        /// <summary>
+        /// Method for getting sum of all figures by square
+        /// </summary>
+        /// <returns>Sum of all figures by square</returns>
         public double GetSFigures()
         {
-            CheckException();
+            if (box.Count < 1)
+            {
+                throw new Exception("There is no figures in box");
+            }
+
             double result = 0;
             foreach (Figure someFigure in box)
             {
@@ -130,16 +183,32 @@ namespace Box
             return result;
         }
 
+        /// <summary>
+        /// Method for removing all circles
+        /// </summary>
         public void RemoveAllCircles()
         {
+            bool find = false;
             foreach (Figure someFigure in box.ToArray())
             {
                 if(someFigure is Circle)
+                {
                     box.Remove(someFigure);
+                    find = true;
+                }
+                    
+            }
+
+            if(find == false)
+            {
+                throw new Exception("There is no Circles in box");
             }
 
         }
 
+        /// <summary>
+        /// Method for removing all film figures
+        /// </summary>
         public void RemoveAllFilmFigures()
         {
             foreach (Figure someFigure in box.ToArray())
@@ -150,6 +219,11 @@ namespace Box
 
         }
 
+        /// <summary>
+        /// Method for saving all figures in xml file bu class XmlWriter
+        /// </summary>
+        /// <param name="figures">List of all figures</param>
+        /// <param name="filePath">String with path of file</param>
         public void SaveFigures(List<Figure> figures, string filePath)
         {
             XmlWriter writer = XmlWriter.Create(filePath);
@@ -173,6 +247,11 @@ namespace Box
             writer.Close();
         }
 
+
+        /// <summary>
+        /// Method for getting all film figures to have opotunity to save this type of figures in file
+        /// </summary>
+        /// <returns>List of film figures</returns>
         public List<Figure> GetFilmFigures()
         {
             List<Figure> paperFigures = new List<Figure>();
@@ -184,6 +263,12 @@ namespace Box
             return paperFigures;
         }
 
+
+        /// <summary>
+        /// Method for getting figures from xml file
+        /// </summary>
+        /// <param name="filePath">String with path of file</param>
+        /// <returns>List of figures from file</returns>
         public List<Figure> GetFiguresFromFile(string filePath)
         {
             List<Figure> figures = new List<Figure>();
@@ -210,34 +295,6 @@ namespace Box
 
             return figures;
         }
-
-
-        //private XmlDocument LoadDocument(string filePath)
-        //{
-        //    XmlDocument document = new XmlDocument();
-        //    using (StreamReader stream = new StreamReader(filePath))
-        //    {
-        //        document.Load(stream);
-
-        //    }
-        //    return (document);
-        //}
-
-        //private XmlDocument SaveDocument(XmlDocument document, string filePath)
-        //{
-        //    using (StreamWriter stream = new StreamWriter(filePath))
-        //    {
-        //        document.Save(stream);
-        //    }
-        //    return (document);
-        //}
-
-        //public void SaveFileStreamWriter(string filePath)
-        //{
-            
-        //}
-
-
 
 
     }

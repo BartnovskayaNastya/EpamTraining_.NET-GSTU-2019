@@ -11,6 +11,11 @@ namespace Shapes
         private int b;
         private int c;
 
+        /// <summary>
+        /// Constructior for triangle
+        /// </summary>
+        /// <param name="material">Material of triangle</param>
+        /// <param name="points">Array of parametrs</param>
         public Triangle(Material material, params int[] points) : base(material, points) 
         {
             a = points[0];
@@ -18,6 +23,11 @@ namespace Shapes
             c = points[2];
         }
 
+
+        /// <summary>
+        /// Constructor for cuting new figure
+        /// </summary>
+        /// <param name="figure">Result of cutting figure </param>
         public Triangle(Figure figure)
         {
             if (figure.GetS() > GetS())
@@ -26,12 +36,19 @@ namespace Shapes
             }
         }
 
-
+        /// <summary>
+        /// Method for getting perimetr of shape
+        /// </summary>
+        /// <returns>Perimetr of shape</returns>
         public override double GetP()
         {
             return a + b + c;
         }
 
+        /// <summary>
+        /// Method for getting square of shape
+        /// </summary>
+        /// <returns>Square of shape</returns>
         public override double GetS()
         {
             
@@ -45,6 +62,12 @@ namespace Shapes
             }
         }
 
+
+        /// <summary>
+        /// Overridden method for comparison two objects
+        /// </summary>
+        /// <param name="obj">Object for compare</param>
+        /// <returns>True - if objects equal, false if not </returns>
         public override bool Equals(object obj)
         {
             if (obj == null || obj.GetType() != this.GetType())
@@ -56,6 +79,11 @@ namespace Shapes
                    c == triangle.c;
         }
 
+        /// <summary>
+        /// Overridden method for comparison two Triangles
+        /// </summary>
+        /// <param name="obj">Triangl for compare</param>
+        /// <returns>True - if objects equal, false if not</returns>
         public bool Equals(Triangle obj)
         {
             if (obj == null)
@@ -64,6 +92,10 @@ namespace Shapes
             return obj.a == this.a && obj.b == this.b && obj.c == this.c;
         }
 
+        /// <summary>
+        /// Overridden method for getting hashCode
+        /// </summary>
+        /// <returns>hashCode for object</returns>
         public override int GetHashCode()
         {
             var hashCode = 1861068769;
@@ -74,6 +106,10 @@ namespace Shapes
             return hashCode;
         }
 
+        /// <summary>
+        /// Overridden method for getting string with information about object
+        /// </summary>
+        /// <returns>String with information about object</returns>
         public override string ToString()
         {
             return "Triangle: side A - " + a + " side B - " + b + " side C - " + c + "\n"; 

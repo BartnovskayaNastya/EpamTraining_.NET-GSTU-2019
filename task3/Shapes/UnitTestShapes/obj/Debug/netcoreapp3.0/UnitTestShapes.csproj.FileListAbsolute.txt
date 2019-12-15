@@ -96,3 +96,5 @@ E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\UnitTestShapes\bi
 E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\UnitTestShapes\obj\Debug\netcoreapp3.0\UnitTestShapes.csproj.CopyComplete
 E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\UnitTestShapes\obj\Debug\netcoreapp3.0\UnitTestShapes.dll
 E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\UnitTestShapes\obj\Debug\netcoreapp3.0\UnitTestShapes.pdb
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\UnitTestShapes\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\UnitTestShapes\bin\Debug\netcoreapp3.0\nunit.framework.dll

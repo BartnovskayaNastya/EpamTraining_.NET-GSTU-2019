@@ -8,14 +8,20 @@ namespace ServerClientTCP
 {
     class Client
     {
+        public delegate void GetMsgzServer(string message);
+
+        public event GetMsgzServer GetMsgFromServer;
+
         public string IpAdress { get; private set; }
+        public string Name { get; set; }
 
         public int Port { get; private set; }
         private IPEndPoint endPoint;
         private Socket socketTcp;
 
-        public Client(int port = 8079, string ipAdress = "127.0.0.1")
+        public Client(string name, int port = 8079, string ipAdress = "127.0.0.1")
         {
+            Name = name;
             Port = port;
             IpAdress = ipAdress;
             endPoint = new IPEndPoint(IPAddress.Parse(ipAdress), port);
@@ -39,6 +45,8 @@ namespace ServerClientTCP
 
             }
             while (socketTcp.Available > 0);
+
+            GetMsgFromServer?.Invoke("Massege is received");
 
             socketTcp.Shutdown(SocketShutdown.Both);
             socketTcp.Close();

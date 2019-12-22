@@ -7,6 +7,10 @@ namespace ServerTCP
 {
     public class Server
     {
+        public delegate void GetMsgClient(string message);
+
+        public event GetMsgClient GetMsgFromClient;
+
         public string IpAdress { get; private set; }
        
         public int Port { get; private set; }
@@ -25,6 +29,7 @@ namespace ServerTCP
         public void ListenClients(int count)
         {
             socketTcp.Listen(count);
+
             while (true)
             {
                 Socket listener = socketTcp.Accept();
@@ -43,12 +48,16 @@ namespace ServerTCP
                 byte[] msg = Encoding.UTF8.GetBytes("Successfully");
                 listener.Send(msg);
 
+                GetMsgFromClient?.Invoke("Massege is received");
+
                 listener.Shutdown(SocketShutdown.Both);
                 listener.Close();
             }
 
-
         }
+
+
+
        
 
         

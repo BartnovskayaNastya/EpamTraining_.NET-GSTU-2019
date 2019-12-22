@@ -1,0 +1,8 @@
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task4\ServerTCP\ServerTCP\bin\Debug\netstandard2.0\ServerClientTCP.deps.json
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task4\ServerTCP\ServerTCP\bin\Debug\netstandard2.0\ServerClientTCP.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task4\ServerTCP\ServerTCP\bin\Debug\netstandard2.0\ServerClientTCP.pdb
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task4\ServerTCP\ServerTCP\obj\Debug\netstandard2.0\ServerClientTCP.csprojAssemblyReference.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task4\ServerTCP\ServerTCP\obj\Debug\netstandard2.0\ServerClientTCP.AssemblyInfoInputs.cache
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task4\ServerTCP\ServerTCP\obj\Debug\netstandard2.0\ServerClientTCP.AssemblyInfo.cs
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task4\ServerTCP\ServerTCP\obj\Debug\netstandard2.0\ServerClientTCP.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task4\ServerTCP\ServerTCP\obj\Debug\netstandard2.0\ServerClientTCP.pdb

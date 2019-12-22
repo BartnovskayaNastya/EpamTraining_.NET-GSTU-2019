@@ -6,29 +6,39 @@ using System.Net.Sockets;
 
 namespace ServerClientTCP
 {
-    class Client
+    public class Client
     {
-        public delegate void GetMsgzServer(string message);
 
+        public delegate void GetMsgzServer(string message);
+        /// <summary>
+        /// event for sending messege from server
+        /// </summary>
         public event GetMsgzServer GetMsgFromServer;
 
         public string IpAdress { get; private set; }
-        public string Name { get; set; }
 
         public int Port { get; private set; }
         private IPEndPoint endPoint;
         private Socket socketTcp;
 
-        public Client(string name, int port = 8079, string ipAdress = "127.0.0.1")
+        /// <summary>
+        /// Constructor for client
+        /// </summary>
+        /// <param name="port">Port of connection</param>
+        /// <param name="ipAdress">ipAdress for connection</param>
+        public Client(int port = 8079, string ipAdress = "127.0.0.1")
         {
-            Name = name;
             Port = port;
             IpAdress = ipAdress;
             endPoint = new IPEndPoint(IPAddress.Parse(ipAdress), port);
             socketTcp = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         }
 
-        public void GetMsg(string msg)
+        /// <summary>
+        /// Method for connection with server and sending masseges
+        /// </summary>
+        /// <param name="msg">Massege for server</param>
+        public void SendMsg(string msg)
         {
             var data = Encoding.UTF8.GetBytes(msg);
             socketTcp.Connect(endPoint);

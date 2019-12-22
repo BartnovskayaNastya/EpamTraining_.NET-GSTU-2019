@@ -8,7 +8,9 @@ namespace ServerTCP
     public class Server
     {
         public delegate void GetMsgClient(string message);
-
+        /// <summary>
+        /// event for sending messege from client
+        /// </summary>
         public event GetMsgClient GetMsgFromClient;
 
         public string IpAdress { get; private set; }
@@ -17,7 +19,12 @@ namespace ServerTCP
         private IPEndPoint endPoint;
         private Socket socketTcp;
 
-        public Server(int port = 8079, string ipAdress = "127.0.0.1")
+        /// <summary>
+        /// Constructor for server
+        /// </summary>
+        /// <param name="port">port for connection</param>
+        /// <param name="ipAdress">ipAdress for connection</param>
+        public Server(int port = 11000, string ipAdress = "127.0.0.1")
         {
             Port = port;
             IpAdress = ipAdress;
@@ -26,6 +33,10 @@ namespace ServerTCP
             socketTcp.Bind(endPoint);
         }
 
+        /// <summary>
+        /// Method for waiting and get msg from clients
+        /// </summary>
+        /// <param name="count">amount of clients</param>
         public void ListenClients(int count)
         {
             socketTcp.Listen(count);

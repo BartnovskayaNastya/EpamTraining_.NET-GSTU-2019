@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\Students\\Students.csproj": {}
+    "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\BinaryTree\\BinaryTree.csproj": {}
   },
   "projects": {
-    "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\Students\\Students.csproj": {
+    "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\BinaryTree\\BinaryTree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\Students\\Students.csproj",
-        "projectName": "Students",
-        "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\Students\\Students.csproj",
+        "projectUniqueName": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\BinaryTree\\BinaryTree.csproj",
+        "projectName": "BinaryTree",
+        "projectPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\BinaryTree\\BinaryTree.csproj",
         "packagesPath": "C:\\Users\\Настя\\.nuget\\packages\\",
-        "outputPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\Students\\obj\\",
+        "outputPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task5\\Students\\BinaryTree\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

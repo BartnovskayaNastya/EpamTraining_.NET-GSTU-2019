@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Students
 {
@@ -74,6 +75,31 @@ namespace Students
                 return this.Mark.CompareTo(student.Mark);
             else
                 throw new Exception("Impossible to compare this students");
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Student student &&
+                   name == student.name &&
+                   testName == student.testName &&
+                   mark == student.mark &&
+                   Name == student.Name &&
+                   TestName == student.TestName &&
+                   dateTest == student.dateTest &&
+                   Mark == student.Mark;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -1560043343;
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(name);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(testName);
+            hashCode = hashCode * -1521134295 + mark.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(TestName);
+            hashCode = hashCode * -1521134295 + dateTest.GetHashCode();
+            hashCode = hashCode * -1521134295 + Mark.GetHashCode();
+            return hashCode;
         }
     }
 }

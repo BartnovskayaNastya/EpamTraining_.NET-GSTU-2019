@@ -1,3 +1,9 @@
 E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\obj\Debug\netstandard2.0\BinaryTree.csprojAssemblyReference.cache
 E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\obj\Debug\netstandard2.0\BinaryTree.AssemblyInfoInputs.cache
 E:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\obj\Debug\netstandard2.0\BinaryTree.AssemblyInfo.cs
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\bin\Debug\netstandard2.0\BinaryTree.deps.json
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\bin\Debug\netstandard2.0\BinaryTree.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\bin\Debug\netstandard2.0\BinaryTree.pdb
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\bin\Debug\netstandard2.0\BinaryTree.xml
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\obj\Debug\netstandard2.0\BinaryTree.dll
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task5\Students\BinaryTree\obj\Debug\netstandard2.0\BinaryTree.pdb

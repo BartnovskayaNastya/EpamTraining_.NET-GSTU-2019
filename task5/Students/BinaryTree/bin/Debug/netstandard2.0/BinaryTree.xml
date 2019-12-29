@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BinaryTree</name>
+    </assembly>
+    <members>
+        <member name="M:BinaryTree.BinaryTree`1.#ctor">
+            <summary>
+            Constructor for class Binary Tree
+            </summary>
+        </member>
+        <member name="M:BinaryTree.BinaryTree`1.AddNode(`0)">
+            <summary>
+            Method for adding data tree node 
+            </summary>
+            <param name="data">Data of tree node </param>
+        </member>
+        <member name="M:BinaryTree.BinaryTree`1.AddNodeBranch(BinaryTree.TreeNode{`0},`0)">
+            <summary>
+            Method for adding left or right branch of tree node
+            </summary>
+            <param name="treeNode">Tree node</param>
+            <param name="data">Data of tree node</param>
+        </member>
+        <member name="M:BinaryTree.BinaryTree`1.GetNodeInfo(`0,BinaryTree.TreeNode{`0}@)">
+            <summary>
+            Method for getting all information (Parent and type of node)
+            </summary>
+            <param name="data">data of node</param>
+            <param name="parent">out parametr of parent of tree node</param>
+            <returns>Tree node</returns>
+        </member>
+        <member name="M:BinaryTree.BinaryTree`1.RemoveNode(`0)">
+            <summary>
+            Method for dalete tree node
+            </summary>
+            <param name="data">Data of tree node</param>
+            <returns>true </returns>
+        </member>
+        <member name="P:BinaryTree.TreeNode`1.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="P:BinaryTree.TreeNode`1.LeftBranch">
+            <summary>
+            Left branch for tree node
+            </summary>
+        </member>
+        <member name="P:BinaryTree.TreeNode`1.RightBranch">
+            <summary>
+             Right branch for tree node
+            </summary>
+        </member>
+        <member name="P:BinaryTree.TreeNode`1.Parent">
+            <summary>
+            Parent for tree node
+            </summary>
+        </member>
+        <member name="M:BinaryTree.TreeNode`1.#ctor(`0)">
+            <summary>
+            Constructor for Tree node
+            </summary>
+            <param name="data">Data of tree node</param>
+        </member>
+        <member name="M:BinaryTree.TreeNode`1.CompareTo(`0)">
+            <summary>
+            Method for comparing data
+            </summary>
+            <param name="data">Data for comparing</param>
+            <returns>Result of comparing</returns>
+        </member>
+        <member name="M:BinaryTree.TreeNode`1.Equals(System.Object)">
+            <summary>
+            Override method for object comparisons
+            </summary>
+            <param name="obj">object for comparisons</param>
+            <returns>true if they are equals, false if they are not</returns>
+        </member>
+        <member name="M:BinaryTree.TreeNode`1.GetHashCode">
+            <summary>
+            Override method for getting hashCode
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTest</name>
+    </assembly>
+    <members>
+        <member name="M:UnitTest.UnitTestBinaryTree.UnitTestStudent.TestStringdata">
+            <summary>
+            Method for testing string data
+            </summary>
+        </member>
+        <member name="M:UnitTest.UnitTestBinaryTree.UnitTestStudent.TestIntdata">
+            <summary>
+            Method for testing int data
+            </summary>
+        </member>
+        <member name="M:UnitTest.UnitTestBinaryTree.UnitTestStudent.TestFloatdata">
+            <summary>
+            Method for testing float data
+            </summary>
+        </member>
+        <member name="M:UnitTest.UnitTestBinaryTree.UnitTestStudent.TestBooldata">
+            <summary>
+            Method for testing bool data
+            </summary>
+        </member>
+        <member name="M:UnitTest.UnitTestStudent.TestStudentNameExeptionn">
+            <summary>
+            Method for testing invalid parametr for name
+            </summary>
+        </member>
+        <member name="M:UnitTest.UnitTestStudent.TestStudentMarkExeptionn">
+            <summary>
+            Method for testing invalid parametr for mark
+            </summary>
+        </member>
+        <member name="M:UnitTest.UnitTestStudent.NotEqualsTest">
+            <summary>
+            Method for testing equal
+            </summary>
+        </member>
+        <member name="M:UnitTest.UnitTestStudent.EqualsTest">
+            <summary>
+            Method for testing equal
+            </summary>
+        </member>
+    </members>
+</doc>

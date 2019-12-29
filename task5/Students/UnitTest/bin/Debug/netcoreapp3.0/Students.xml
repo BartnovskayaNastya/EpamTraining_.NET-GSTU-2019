@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Students</name>
+    </assembly>
+    <members>
+        <member name="P:Students.Student.Name">
+            <summary>
+            Property for getting and setting name for student 
+            </summary>
+        </member>
+        <member name="P:Students.Student.TestName">
+            <summary>
+             Property for getting and setting name for test
+            </summary>
+        </member>
+        <member name="F:Students.Student.dateTest">
+            <summary>
+            Date of test for student
+            </summary>
+        </member>
+        <member name="P:Students.Student.Mark">
+            <summary>
+            Mark of student's test
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Students.Student.#ctor(System.String,System.String,System.DateTime,System.Int32)" -->
+        <member name="M:Students.Student.Equals(System.Object)">
+            <summary>
+            Override method for object comparisons
+            </summary>
+            <param name="obj">object for comparisons</param>
+            <returns>true if they are equals, false if they are not</returns>
+        </member>
+        <member name="M:Students.Student.GetHashCode">
+            <summary>
+            Override method for getting hashCode
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:Students.Student.CompareTo(System.Object)">
+            <summary>
+            Method for comparing students by marks
+            </summary>
+            <param name="obj">Student for comparing</param>
+            <returns>Result of comparing</returns>
+        </member>
+    </members>
+</doc>

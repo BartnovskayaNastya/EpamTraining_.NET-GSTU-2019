@@ -3,11 +3,15 @@ using System.Collections.Generic;
 
 namespace Students
 {
-    public class Student : IComparable<Student>
+    public class Student : IComparable
     {
         private string name;
         private string testName;
         private int mark;
+
+        /// <summary>
+        /// Property for getting and setting name for student 
+        /// </summary>
         public string Name 
         {
             get 
@@ -16,15 +20,23 @@ namespace Students
             } 
             set
             {
-                if(name.Length < 1)
+
+                if(value.Length < 1)
                 {
                     throw new Exception("You need to input some name");
                 }
-
-                name = value;
+                else
+                {
+                    name = value;
+                }
+             
             }
-        } 
+        }
 
+
+        /// <summary>
+        ///  Property for getting and setting name for test
+        /// </summary>
         public string TestName 
         {
             get
@@ -33,7 +45,7 @@ namespace Students
             }
             set
             {
-                if (testName.Length < 1)
+                if (value.Length < 1)
                 {
                     throw new Exception("You need to input some name");
                 }
@@ -42,7 +54,15 @@ namespace Students
             }
         }
 
+        /// <summary>
+        /// Date of test for student
+        /// </summary>
         public DateTime dateTest;
+
+
+        /// <summary>
+        /// Mark of student's test
+        /// </summary>
         public int Mark
         {
             get
@@ -51,32 +71,42 @@ namespace Students
             }
             set
             {
-                if (mark < 1 || mark > 10)
+                if (value < 1 || value > 10)
                 {
                     throw new Exception("You need to input mark between 1 and 10");
                 }
+                else
+                {
+                    mark = value;
+                }
 
-                mark = value;
+               
             }
         }
 
+        /// <summary>
+        /// Constructor for class Student
+        /// </summary>
+        /// <param name="name">Name of student</param>
+        /// <param name="testName">Name of test for student</param>
+        /// <param name="dateTest">Date of test for student</param>
+        /// <param name="mark">Mark of student's test<param>
         public Student(string name, string testName, DateTime dateTest, int mark)
         {
             Name = name;
             TestName = testName;
-            this.dateTest = dateTest;
+            this.dateTest = Convert.ToDateTime(dateTest);
             Mark = mark;
 
         }
 
-        public int CompareTo(Student student)
-        {
-            if (student != null)
-                return this.Mark.CompareTo(student.Mark);
-            else
-                throw new Exception("Impossible to compare this students");
-        }
+      
 
+        /// <summary>
+        /// Override method for object comparisons
+        /// </summary>
+        /// <param name="obj">object for comparisons</param>
+        /// <returns>true if they are equals, false if they are not</returns>
         public override bool Equals(object obj)
         {
             return obj is Student student &&
@@ -89,6 +119,10 @@ namespace Students
                    Mark == student.Mark;
         }
 
+        /// <summary>
+        /// Override method for getting hashCode
+        /// </summary>
+        /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
             var hashCode = -1560043343;
@@ -100,6 +134,24 @@ namespace Students
             hashCode = hashCode * -1521134295 + dateTest.GetHashCode();
             hashCode = hashCode * -1521134295 + Mark.GetHashCode();
             return hashCode;
+        }
+
+        /// <summary>
+        /// Method for comparing students by marks
+        /// </summary>
+        /// <param name="obj">Student for comparing</param>
+        /// <returns>Result of comparing</returns>
+        public virtual int CompareTo(object obj)
+        {
+            Student student = obj as Student;
+            if (student != null)
+            {
+                return mark.CompareTo(student.mark);
+            }
+            else
+            {
+                throw new Exception("Error.");
+            }
         }
     }
 }

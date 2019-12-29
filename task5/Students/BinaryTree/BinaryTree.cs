@@ -4,17 +4,23 @@ using System.Collections.Generic;
 namespace BinaryTree
 {
     [Serializable]
-    public class BinaryTree<T> : IComparable where T : IComparable
-    {
-        private int counter;
-        private TreeNode<T> treeNode;
-        private TreeNode<T> parent;
 
+    public class BinaryTree<T> where T : IComparable
+    {
+        private TreeNode<T> treeNode;
+
+        /// <summary>
+        /// Constructor for class Binary Tree
+        /// </summary>
         public BinaryTree()
         {
 
         }
 
+        /// <summary>
+        /// Method for adding data tree node 
+        /// </summary>
+        /// <param name="data">Data of tree node </param>
         public void AddNode(T data)
         {
             if (treeNode == null)
@@ -23,12 +29,17 @@ namespace BinaryTree
             }
             else
             {
-                FindNode(treeNode, data);
+                AddNodeBranch(treeNode, data);
             }
             
         }
 
-        private void FindNode(TreeNode<T> treeNode, T data)
+        /// <summary>
+        /// Method for adding left or right branch of tree node
+        /// </summary>
+        /// <param name="treeNode">Tree node</param>
+        /// <param name="data">Data of tree node</param>
+        private void AddNodeBranch(TreeNode<T> treeNode, T data)
         {
 
             if (data.CompareTo(treeNode.Data) < 0)
@@ -39,7 +50,7 @@ namespace BinaryTree
                 }
                 else
                 {
-                    FindNode(treeNode.LeftBranch, data);
+                    AddNodeBranch(treeNode.LeftBranch, data);
                 }
             }
             else
@@ -50,13 +61,18 @@ namespace BinaryTree
                 }
                 else
                 {
-                    FindNode(treeNode.RightBranch, data);
+                    AddNodeBranch(treeNode.RightBranch, data);
                 }
             }
         }
 
-       
-        private TreeNode<T> GetNodeInfo(T data, out TreeNode<T> parent)
+       /// <summary>
+       /// Method for getting all information (Parent and type of node)
+       /// </summary>
+       /// <param name="data">data of node</param>
+       /// <param name="parent">out parametr of parent of tree node</param>
+       /// <returns>Tree node</returns>
+        public TreeNode<T> GetNodeInfo(T data, out TreeNode<T> parent)
         {
             TreeNode<T> node = treeNode;
             parent = null;
@@ -84,8 +100,12 @@ namespace BinaryTree
             return node;
         }
 
-
-        public bool RemoveNode(T data)
+        /// <summary>
+        /// Method for dalete tree node
+        /// </summary>
+        /// <param name="data">Data of tree node</param>
+        /// <returns>true </returns>
+        public void RemoveNode(T data)
         {
             TreeNode<T> node;
             TreeNode<T> parent;
@@ -94,10 +114,9 @@ namespace BinaryTree
 
             if (node == null)
             {
-                return false;
+                throw new Exception("Data is not correct");
             }
 
-            counter--;
 
             if (node.RightBranch == null)
             {
@@ -168,13 +187,8 @@ namespace BinaryTree
                      }
                 }
             }
-            return true;
         }
 
-        public int CompareTo(object obj)
-        {
-            throw new NotImplementedException();
-        }
 
     }
 }

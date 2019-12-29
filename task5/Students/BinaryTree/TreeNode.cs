@@ -6,32 +6,57 @@ using System.Text;
 namespace BinaryTree
 {
     [Serializable]
-    class TreeNode<T> where T : IComparable
+    public class TreeNode<T> where T : IComparable
     {
+        /// <summary>
+        /// Data
+        /// </summary>
         [DataMember]
         public T Data { get; set; }
 
+        /// <summary>
+        /// Left branch for tree node
+        /// </summary>
         [DataMember]
         public TreeNode<T> LeftBranch { get; set; }
 
+        /// <summary>
+        ///  Right branch for tree node
+        /// </summary>
         [DataMember]
         public TreeNode<T> RightBranch { get; set; }
 
+        /// <summary>
+        /// Parent for tree node
+        /// </summary>
         [DataMember]
         public TreeNode<T> Parent { get; set; }
 
+        /// <summary>
+        /// Constructor for Tree node
+        /// </summary>
+        /// <param name="data">Data of tree node</param>
         public TreeNode(T data)
         {
             Data = data;
         }
 
-      
 
+        /// <summary>
+        /// Method for comparing data
+        /// </summary>
+        /// <param name="data">Data for comparing</param>
+        /// <returns>Result of comparing</returns>
         public int CompareTo(T data)
         {
             return Data.CompareTo(data);
         }
 
+        /// <summary>
+        /// Override method for object comparisons
+        /// </summary>
+        /// <param name="obj">object for comparisons</param>
+        /// <returns>true if they are equals, false if they are not</returns>
         public override bool Equals(object obj)
         {
             return obj is TreeNode<T> node &&
@@ -41,6 +66,10 @@ namespace BinaryTree
                    EqualityComparer<TreeNode<T>>.Default.Equals(Parent, node.Parent);
         }
 
+        /// <summary>
+        /// Override method for getting hashCode
+        /// </summary>
+        /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
             var hashCode = -1051451865;

@@ -938,7 +938,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "BoxExceptions": "1.0.0",
-          "Shapes": "1.0.0"
+          "Figures": "1.0.0",
+          "FilmFigures": "1.0.0",
+          "PaperFigures": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Box.dll": {}
@@ -957,14 +959,41 @@
           "bin/placeholder/BoxExceptions.dll": {}
         }
       },
-      "Shapes/1.0.0": {
+      "Figures/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
-          "bin/placeholder/Shapes.dll": {}
+          "bin/placeholder/Figures.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Shapes.dll": {}
+          "bin/placeholder/Figures.dll": {}
+        }
+      },
+      "FilmFigures/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Figures": "1.0.0",
+          "PaperFigures": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FilmFigures.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FilmFigures.dll": {}
+        }
+      },
+      "PaperFigures/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Figures": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PaperFigures.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaperFigures.dll": {}
         }
       }
     }
@@ -3811,21 +3840,31 @@
       "path": "../BoxExceptions/BoxExceptions.csproj",
       "msbuildProject": "../BoxExceptions/BoxExceptions.csproj"
     },
-    "Shapes/1.0.0": {
+    "Figures/1.0.0": {
       "type": "project",
-      "path": "../Shapes/Shapes.csproj",
-      "msbuildProject": "../Shapes/Shapes.csproj"
+      "path": "../Shapes/Figures.csproj",
+      "msbuildProject": "../Shapes/Figures.csproj"
+    },
+    "FilmFigures/1.0.0": {
+      "type": "project",
+      "path": "../FilmFigures/FilmFigures.csproj",
+      "msbuildProject": "../FilmFigures/FilmFigures.csproj"
+    },
+    "PaperFigures/1.0.0": {
+      "type": "project",
+      "path": "../PaperFigures/PaperFigures.csproj",
+      "msbuildProject": "../PaperFigures/PaperFigures.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "Box >= 1.0.0",
       "BoxExceptions >= 1.0.0",
+      "Figures >= 1.0.0",
       "MSTest.TestAdapter >= 2.0.0",
       "MSTest.TestFramework >= 2.0.0",
       "Microsoft.NET.Test.Sdk >= 16.4.0",
       "NUnit >= 3.12.0",
-      "Shapes >= 1.0.0",
       "coverlet.collector >= 1.1.0"
     ]
   },
@@ -3865,8 +3904,8 @@
             "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Box\\Box.csproj": {
               "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Box\\Box.csproj"
             },
-            "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Shapes.csproj": {
-              "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Shapes.csproj"
+            "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj": {
+              "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj"
             }
           }
         }

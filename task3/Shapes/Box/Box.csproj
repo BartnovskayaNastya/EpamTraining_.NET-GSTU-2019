@@ -4,9 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Box\Box.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\BoxExceptions\BoxExceptions.csproj" />
-    <ProjectReference Include="..\Shapes\Shapes.csproj" />
+    <ProjectReference Include="..\Shapes\Figures.csproj" />
   </ItemGroup>
 
 </Project>

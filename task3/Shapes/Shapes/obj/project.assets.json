@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Shapes.csproj",
-      "projectName": "Shapes",
-      "projectPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Shapes.csproj",
+      "projectUniqueName": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj",
+      "projectName": "Figures",
+      "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj",
       "packagesPath": "C:\\Users\\Настя\\.nuget\\packages\\",
-      "outputPath": "E:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\obj\\",
+      "outputPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

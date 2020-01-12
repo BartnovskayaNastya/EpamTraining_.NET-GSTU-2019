@@ -1,59 +1,63 @@
-﻿using System;
+﻿using Figures;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Shapes
 {
     [Serializable]
-    public class Square : Figure
+    public abstract class Square : IFigure
     {
-        private int size;
+        public int Size { get; private set; }
 
         /// <summary>
         /// Constructior for square
         /// </summary>
-        /// <param name="material">Material of square</param>
         /// <param name="points">Array of parametrs</param>
-        public Square(Material material, params int[] points) : base(material, points)
+        public Square(params int[] points)
         {
-            size = points[0];
+            Size = points[0];
         }
 
         /// <summary>
         /// Constructor for cuting new figure
         /// </summary>
         /// <param name="figure">Result of cutting figure </param>
-        public Square(Figure figure) 
+        public Square(IFigure figure, int size) 
         {
 
-            if ((figure.GetS() > GetS()) || (figure is Rectangle && (figure.points[0] > size || figure.points[1] > size) ))
+            if (figure.GetS() > GetS())
             {
                 throw new Exception("You can't cut this shape");
+            }
+            else
+            {
+                Size = size;
             }
 
 
         }
-
+        
         /// <summary>
         /// Method for getting perimetr of shape
         /// </summary>
         /// <returns>Perimetr of shape</returns>
-        public override double GetP()
+        public double GetP()
         {
-            return 4 * size;
+            return 4 * Size;
         }
 
         /// <summary>
         /// Method for getting square of shape
         /// </summary>
         /// <returns>Square of shape</returns>
-        public override double GetS()
+        public double GetS()
         {
-            return size * size;
+            return Size * Size;
         }
 
 
-        /// <summary>
+       /* /// <summary>
         /// Overridden method for comparison two objects
         /// </summary>
         /// <param name="obj">Object for compare</param>
@@ -99,7 +103,7 @@ namespace Shapes
         public override string ToString()
         {
             return "Square: side  - " + size + "\n";
-        }
+        }*/
 
     }
 }

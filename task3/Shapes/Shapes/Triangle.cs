@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Figures;
+using System;
 using System.Collections.Generic;
 using System.Text;
+
 
 namespace Shapes
 {
     [Serializable]
-    public class Triangle : Figure
+    public abstract class Triangle : IFigure
     {
         private int a;
         private int b;
@@ -14,9 +16,8 @@ namespace Shapes
         /// <summary>
         /// Constructior for triangle
         /// </summary>
-        /// <param name="material">Material of triangle</param>
         /// <param name="points">Array of parametrs</param>
-        public Triangle(Material material, params int[] points) : base(material, points) 
+        public Triangle(params int[] points)
         {
             a = points[0];
             b = points[1];
@@ -28,11 +29,17 @@ namespace Shapes
         /// Constructor for cuting new figure
         /// </summary>
         /// <param name="figure">Result of cutting figure </param>
-        public Triangle(Figure figure)
+        public Triangle(IFigure figure, int a, int b, int c)
         {
             if (figure.GetS() > GetS())
             {
                 throw new Exception("You can't cut this shape");
+            }
+            else
+            {
+                this.a = a;
+                this.b = b;
+                this.c = c;
             }
         }
 
@@ -40,7 +47,7 @@ namespace Shapes
         /// Method for getting perimetr of shape
         /// </summary>
         /// <returns>Perimetr of shape</returns>
-        public override double GetP()
+        public double GetP()
         {
             return a + b + c;
         }
@@ -49,7 +56,7 @@ namespace Shapes
         /// Method for getting square of shape
         /// </summary>
         /// <returns>Square of shape</returns>
-        public override double GetS()
+        public double GetS()
         {
             
             if (a == b) return (c * (Math.Sqrt(Math.Pow(a, 2) - ((Math.Pow(c, 2)) / 4)))) / 2;
@@ -63,7 +70,7 @@ namespace Shapes
         }
 
 
-        /// <summary>
+       /* /// <summary>
         /// Overridden method for comparison two objects
         /// </summary>
         /// <param name="obj">Object for compare</param>
@@ -114,6 +121,6 @@ namespace Shapes
         {
             return "Triangle: side A - " + a + " side B - " + b + " side C - " + c + "\n"; 
         }
-
+        */
     }
 }

@@ -6,6 +6,10 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\UnitTestShapes\UnitTestShapes.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
@@ -20,7 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BoxExceptions\BoxExceptions.csproj" />
     <ProjectReference Include="..\Box\Box.csproj" />
-    <ProjectReference Include="..\Shapes\Shapes.csproj" />
+    <ProjectReference Include="..\Shapes\Figures.csproj" />
   </ItemGroup>
 
 </Project>

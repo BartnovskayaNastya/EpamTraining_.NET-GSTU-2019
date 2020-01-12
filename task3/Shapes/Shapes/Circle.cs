@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using System;
 
-namespace Shapes
+namespace Figures
 {
     [Serializable]
-    public class Circle : Figure
+    public abstract class Circle : IFigure
     {
         /// <summary>
         /// Radius of circle
@@ -15,9 +14,8 @@ namespace Shapes
         /// <summary>
         /// Constructior for circle
         /// </summary>
-        /// <param name="material">Material of circle</param>
         /// <param name="points">Array of parametrs</param>
-        public Circle(Material material, params int[] points) : base(material, points)
+        public Circle(params int[] points)
         {
             R = points[0];
         }
@@ -26,20 +24,24 @@ namespace Shapes
         /// Constructor for cuting new figure
         /// </summary>
         /// <param name="figure">Result of cutting figure </param>
-        public Circle(Figure figure)
+        /// /// <param name="r">Radius of cutting figure </param>
+        /// 
+        public Circle(IFigure figure, int r)
         {
-            if ((figure.GetS() > GetS()) || (figure is Square && figure.points[0] > R) 
-                || (figure is Rectangle && ((figure.points[0] > R)|| (figure.points[1] > R))))
+            if (figure.GetS() > GetS())
             {
                 throw new Exception("You can't cut this shape");
             }
+            else
+            {
+                R = r;
+            }
         }
-
         /// <summary>
         /// Method for getting perimetr of shape
         /// </summary>
         /// <returns>Perimetr of shape</returns>
-        public override double GetP()
+        public double GetP()
         {
             return 2 * Math.PI * R;
         }
@@ -48,12 +50,13 @@ namespace Shapes
         /// Method for getting square of shape
         /// </summary>
         /// <returns>Square of shape</returns>
-        public override double GetS()
+        public double GetS()
         {
             return Math.PI * Math.Pow(R, 2);
         }
 
-        /// <summary>
+
+        /*/// <summary>
         /// Overridden method for comparison two objects
         /// </summary>
         /// <param name="obj">Object for compare</param>
@@ -100,7 +103,7 @@ namespace Shapes
         public override string ToString()
         {
             return "Circle: radius - " + R + "\n";
-        }
+        }*/
 
     }
 }

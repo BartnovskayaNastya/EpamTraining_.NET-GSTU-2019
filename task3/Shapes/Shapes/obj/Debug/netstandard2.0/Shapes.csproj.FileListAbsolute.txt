@@ -6,3 +6,4 @@ e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Shapes\obj\Debug\
 e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Shapes\obj\Debug\netstandard2.0\Shapes.AssemblyInfo.cs
 e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Shapes\obj\Debug\netstandard2.0\Shapes.dll
 e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Shapes\obj\Debug\netstandard2.0\Shapes.pdb
+e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Shapes\bin\Debug\netstandard2.0\Shapes.xml

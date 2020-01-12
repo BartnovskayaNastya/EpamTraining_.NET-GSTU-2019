@@ -1,46 +1,50 @@
-﻿using System;
+﻿using Figures;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Shapes
 {
     [Serializable]
-    public class Rectangle : Figure
+    public abstract class Rectangle : IFigure
     {
         public int Width { get; private set; }
-        private int height;
+        public int Height { get; private set; }
 
-        /// <summary>
-        /// Constructior for rectangle
-        /// </summary>
-        /// <param name="material">Material of rectangle</param>
-        /// <param name="points">Array of parametrs</param>
-        public Rectangle(Material material, params int[] points) : base(material, points)
+    /// <summary>
+    /// Constructior for rectangle
+    /// </summary>
+    /// <param name="points">Array of parametrs</param>
+    public Rectangle(params int[] points)
         {
-            height = points[0];
+            Height = points[0];
             Width = points[1];
         }
 
-        /// <summary>
+       /// <summary>
         /// Constructor for cuting new figure
         /// </summary>
         /// <param name="figure">Result of cutting figure </param>
-        public Rectangle(Figure figure)
+        public Rectangle(IFigure figure, int a, int b)
         {
-
             if (figure.GetS() > GetS())
             {
                 throw new Exception("You can't cut this shape");
             }
+            else
+            {
+                Width = b;
+                Height = a;
+            }
         }
-
+        
         /// <summary>
         /// Method for getting perimetr of shape
         /// </summary>
         /// <returns>Perimetr of shape</returns>
-        public override double GetP()
+        public double GetP()
         {
-            return 2 * (Width + height);
+            return 2 * (Width + Height);
             
         }
 
@@ -48,12 +52,12 @@ namespace Shapes
         /// Method for getting square of shape
         /// </summary>
         /// <returns>Square of shape</returns>
-        public override double GetS()
+        public double GetS()
         {
-            return Width * height;
+            return Width * Height;
         }
 
-        /// <summary>
+        /*/// <summary>
         /// Overridden method for comparison two objects
         /// </summary>
         /// <param name="obj">Object for compare</param>
@@ -101,6 +105,6 @@ namespace Shapes
         public override string ToString()
         {
             return "Rectangle: side A - " + Width + " side B - " + height +  "\n";
-        }
+        }*/
     }
 }

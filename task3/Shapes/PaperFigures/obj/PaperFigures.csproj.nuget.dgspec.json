@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "restore": {
+    "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\PaperFigures\\PaperFigures.csproj": {}
+  },
+  "projects": {
+    "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\PaperFigures\\PaperFigures.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\PaperFigures\\PaperFigures.csproj",
+        "projectName": "PaperFigures",
+        "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\PaperFigures\\PaperFigures.csproj",
+        "packagesPath": "C:\\Users\\Настя\\.nuget\\packages\\",
+        "outputPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\PaperFigures\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Настя\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj": {
+                "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj",
+        "projectName": "Figures",
+        "projectPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\Figures.csproj",
+        "packagesPath": "C:\\Users\\Настя\\.nuget\\packages\\",
+        "outputPath": "e:\\epamTraining\\Tasks\\EpamTraining_.NET-GSTU-2019\\task3\\Shapes\\Shapes\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Настя\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,9 @@ using Shapes;
 using System.Xml;
 using System.IO;
 using System.Xml.Serialization;
-using System.Text;
+using Figures;
+using FilmFigures;
+using PaperFigures;
 
 namespace Box
 {
@@ -14,7 +16,7 @@ namespace Box
         /// <summary>
         /// List for figures in box
         /// </summary>
-        public List<Figure> box = new List<Figure>(20);
+        public List<IFigure> box = new List<IFigure>(20);
 
         /// <summary>
         /// Constructor for box
@@ -51,14 +53,14 @@ namespace Box
         /// Method for adding figure in box
         /// </summary>
         /// <param name="figure">Type of figure for adding</param>
-        public void AddFigure(Figure figure)
+        public void AddFigure(IFigure figure)
         {
             if (box.Count == 20)
             {
                 throw new FullBoxException();
             }
 
-            foreach (Figure someFigure in box)
+            foreach (IFigure someFigure in box)
             {
                 if (someFigure.Equals(figure))
                 {
@@ -73,7 +75,7 @@ namespace Box
         /// Method for finding figure by number
         /// </summary>
         /// <param name="number">Number of figure for finding figure by number</param>
-        public Figure FindByNumber(int number)
+        public IFigure FindByNumber(int number)
         {
             CheckException(number);
 
@@ -104,7 +106,7 @@ namespace Box
         /// </summary>
         /// <param name="number">Number of figure for changing</param>
         /// <param name="figure">Figure for changing</param>
-        public void ChangeByNumber(int number, Figure figure)
+        public void ChangeByNumber(int number, IFigure figure)
         {
             CheckException(number);
 
@@ -116,10 +118,10 @@ namespace Box
         /// Method for finding figure similar to anouther figure
         /// </summary>
         /// <param name="figure">Figure for sample</param>
-        public Figure FindFigure(Figure figure)
+        public IFigure FindFigure(IFigure figure)
         {
             bool flag = false;
-            foreach (Figure someFigure in box)
+            foreach (IFigure someFigure in box)
             {
                 if (figure.Equals(someFigure))
                 {
@@ -137,7 +139,7 @@ namespace Box
         /// </summary>
         public void ShowExistsFigures()
         {
-            foreach (Figure someFigure in box)
+            foreach (IFigure someFigure in box)
             {
                 someFigure.ToString();
             }
@@ -155,7 +157,7 @@ namespace Box
             }
 
             double result = 0;
-            foreach (Figure someFigure in box)
+            foreach (IFigure someFigure in box)
             {
                 result += someFigure.GetP();
             }
@@ -175,7 +177,7 @@ namespace Box
             }
 
             double result = 0;
-            foreach (Figure someFigure in box)
+            foreach (IFigure someFigure in box)
             {
                 result += someFigure.GetS();
             }
@@ -189,7 +191,7 @@ namespace Box
         public void RemoveAllCircles()
         {
             bool find = false;
-            foreach (Figure someFigure in box.ToArray())
+            foreach (IFigure someFigure in box.ToArray())
             {
                 if(someFigure is Circle)
                 {
@@ -211,9 +213,9 @@ namespace Box
         /// </summary>
         public void RemoveAllFilmFigures()
         {
-            foreach (Figure someFigure in box.ToArray())
+            foreach (IFigure someFigure in box.ToArray())
             {
-                if (someFigure.Material == Material.Film)
+                if (someFigure is IFilm)
                     box.Remove(someFigure);
             }
 
@@ -224,19 +226,19 @@ namespace Box
         /// </summary>
         /// <param name="figures">List of all figures</param>
         /// <param name="filePath">String with path of file</param>
-        public void SaveFigures(List<Figure> figures, string filePath)
+        public void SaveFigures(List<IFigure> figures, string filePath)
         {
             XmlWriter writer = XmlWriter.Create(filePath);
 
             writer.WriteStartDocument();
             writer.WriteStartElement("figures");
 
-            foreach (Figure item in figures)
+            foreach (IFigure item in figures)
             {
                 writer.WriteStartElement("figure");
-                writer.WriteStartElement(Figure.GetFigureType(item));
-                writer.WriteAttributeString("material", Figure.GetFigureMaterial(item));
-                if(item.Material == Material.Paper && item.isPainted == true)
+                writer.WriteStartElement(IFigure.GetFigureType(item));
+                writer.WriteAttributeString("material", IFigure.GetFigureMaterial(item));
+                if(item is IPaper)
                 {
                     writer.WriteAttributeString("color", item.Color.ToString());
                 }
@@ -252,12 +254,12 @@ namespace Box
         /// Method for getting all film figures to have opotunity to save this type of figures in file
         /// </summary>
         /// <returns>List of film figures</returns>
-        public List<Figure> GetFilmFigures()
+        public List<IFigure> GetFilmFigures()
         {
-            List<Figure> paperFigures = new List<Figure>();
-            foreach (Figure someFigure in box)
+            List<IFigure> paperFigures = new List<IFigure>();
+            foreach (IFigure someFigure in box)
             {
-                if (someFigure.Material == Material.Film)
+                if (someFigure is IFilm)
                     paperFigures.Add(someFigure);
             }
             return paperFigures;
@@ -269,10 +271,10 @@ namespace Box
         /// </summary>
         /// <param name="filePath">String with path of file</param>
         /// <returns>List of figures from file</returns>
-        public List<Figure> GetFiguresFromFile(string filePath)
+        public List<IFigure> GetFiguresFromFile(string filePath)
         {
-            List<Figure> figures = new List<Figure>();
-            Figure figure = null;
+            List<IFigure> figures = new List<IFigure>();
+            IFigure figure = null;
 
             XmlReader reader = XmlReader.Create(filePath);
             while (reader.Read())

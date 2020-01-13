@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BoxExceptions\BoxExceptions.csproj" />
+    <ProjectReference Include="..\FilmFigures\FilmFigures.csproj" />
+    <ProjectReference Include="..\PaperFigures\PaperFigures.csproj" />
     <ProjectReference Include="..\Shapes\Figures.csproj" />
   </ItemGroup>
 

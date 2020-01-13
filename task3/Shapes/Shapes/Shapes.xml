@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes</name>
+    </assembly>
+    <members>
+        <member name="P:Shapes.Circle.R">
+            <summary>
+            Radius of circle
+            </summary>
+        </member>
+        <member name="M:Shapes.Circle.#ctor(Shapes.Material,System.Int32[])">
+            <summary>
+            Constructior for circle
+            </summary>
+            <param name="material">Material of circle</param>
+            <param name="points">Array of parametrs</param>
+        </member>
+        <member name="M:Shapes.Circle.#ctor(Shapes.Figure)">
+            <summary>
+            Constructor for cuting new figure
+            </summary>
+            <param name="figure">Result of cutting figure </param>
+        </member>
+        <member name="M:Shapes.Circle.GetP">
+            <summary>
+            Method for getting perimetr of shape
+            </summary>
+            <returns>Perimetr of shape</returns>
+        </member>
+        <member name="M:Shapes.Circle.GetS">
+            <summary>
+            Method for getting square of shape
+            </summary>
+            <returns>Square of shape</returns>
+        </member>
+        <member name="M:Shapes.Circle.Equals(System.Object)">
+            <summary>
+            Overridden method for comparison two objects
+            </summary>
+            <param name="obj">Object for compare</param>
+            <returns>True - if objects equal, false if not </returns>
+        </member>
+        <member name="M:Shapes.Circle.Equals(Shapes.Circle)">
+            <summary>
+            Overridden method for comparison two circle
+            </summary>
+            <param name="obj">Circle for compare</param>
+            <returns>True - if objects equal, false if not</returns>
+        </member>
+        <member name="M:Shapes.Circle.GetHashCode">
+            <summary>
+            Overridden method for getting hashCode
+            </summary>
+            <returns>hashCode for object</returns>
+        </member>
+        <member name="M:Shapes.Circle.ToString">
+            <summary>
+            Overridden method for getting string with information about object
+            </summary>
+            <returns>String with information about object</returns>
+        </member>
+        <member name="F:Shapes.Figure.points">
+            <summary>
+            array of parametrs for shape
+            </summary>
+        </member>
+        <member name="M:Shapes.Figure.#ctor(Shapes.Material,System.Int32[])">
+            <summary>
+            Constructior for figure
+            </summary>
+            <param name="material">Material of figure</param>
+            <param name="points">Array of parametrs</param>
+        </member>
+        <member name="M:Shapes.Figure.GetFigureType(Shapes.Figure)">
+            <summary>
+            Method for getting string type of figure 
+            </summary>
+            <param name="figure">Figure for getting type</param>
+            <returns>String type of figure</returns>
+        </member>
+        <member name="M:Shapes.Figure.GetFigureMaterial(Shapes.Figure)">
+            <summary>
+            Method for getting string type of material 
+            </summary>
+            <param name="figure">Figure for getting material </param>
+            <returns>String material of figure</returns>
+        </member>
+        <member name="M:Shapes.Figure.Paint(Shapes.Color)">
+            <summary>
+            Method for painting paper figure
+            </summary>
+            <param name="color">Color for painting</param>
+        </member>
+        <member name="M:Shapes.Figure.GetP">
+            <summary>
+            Abstract method for getting perimetr of shape
+            </summary>
+            <returns>Perimetr of shape</returns>
+        </member>
+        <member name="M:Shapes.Figure.GetS">
+            <summary>
+            Abstract method for getting square of shape
+            </summary>
+            <returns>Square of shape</returns>
+        </member>
+        <member name="M:Shapes.Figure.Equals(System.Object)">
+            <summary>
+            Overridden method for comparison two objects
+            </summary>
+            <param name="obj">Object for compare</param>
+            <returns>True - if objects equal, false if not </returns>
+        </member>
+        <member name="M:Shapes.Figure.Equals(Shapes.Figure)">
+            <summary>
+            Overridden method for comparison two figure
+            </summary>
+            <param name="obj">Figure for compare</param>
+            <returns>True - if objects equal, false if not</returns>
+        </member>
+        <member name="M:Shapes.Figure.GetHashCode">
+            <summary>
+            Overridden method for getting hashCode
+            </summary>
+            <returns>hashCode for object</returns>
+        </member>
+        <member name="M:Shapes.Figure.ToString">
+            <summary>
+            Overridden method for getting string with information about object
+            </summary>
+            <returns>String with information about object</returns>
+        </member>
+        <member name="T:Shapes.Color">
+            <summary>
+            enum for painting with colors
+            </summary>
+        </member>
+        <member name="T:Shapes.Material">
+            <summary>
+            enum with materials
+            </summary>
+        </member>
+        <member name="M:Shapes.IMaterial.Paint(Shapes.Color)">
+            <summary>
+            Method for painting figure
+            </summary>
+            <param name="color">Color for painting</param>
+        </member>
+        <member name="M:Shapes.Rectangle.#ctor(Shapes.Material,System.Int32[])">
+            <summary>
+            Constructior for rectangle
+            </summary>
+            <param name="material">Material of rectangle</param>
+            <param name="points">Array of parametrs</param>
+        </member>
+        <member name="M:Shapes.Rectangle.#ctor(Shapes.Figure)">
+            <summary>
+            Constructor for cuting new figure
+            </summary>
+            <param name="figure">Result of cutting figure </param>
+        </member>
+        <member name="M:Shapes.Rectangle.GetP">
+            <summary>
+            Method for getting perimetr of shape
+            </summary>
+            <returns>Perimetr of shape</returns>
+        </member>
+        <member name="M:Shapes.Rectangle.GetS">
+            <summary>
+            Method for getting square of shape
+            </summary>
+            <returns>Square of shape</returns>
+        </member>
+        <member name="M:Shapes.Rectangle.Equals(System.Object)">
+            <summary>
+            Overridden method for comparison two objects
+            </summary>
+            <param name="obj">Object for compare</param>
+            <returns>True - if objects equal, false if not </returns>
+        </member>
+        <member name="M:Shapes.Rectangle.Equals(Shapes.Rectangle)">
+            <summary>
+            Overridden method for comparison two rectangle
+            </summary>
+            <param name="obj">Rectangle for compare</param>
+            <returns>True - if objects equal, false if not</returns>
+        </member>
+        <member name="M:Shapes.Rectangle.GetHashCode">
+            <summary>
+            Overridden method for getting hashCode
+            </summary>
+            <returns>hashCode for object</returns>
+        </member>
+        <member name="M:Shapes.Rectangle.ToString">
+            <summary>
+            Overridden method for getting string with information about object
+            </summary>
+            <returns>String with information about object</returns>
+        </member>
+        <member name="M:Shapes.Square.#ctor(Shapes.Material,System.Int32[])">
+            <summary>
+            Constructior for square
+            </summary>
+            <param name="material">Material of square</param>
+            <param name="points">Array of parametrs</param>
+        </member>
+        <member name="M:Shapes.Square.#ctor(Shapes.Figure)">
+            <summary>
+            Constructor for cuting new figure
+            </summary>
+            <param name="figure">Result of cutting figure </param>
+        </member>
+        <member name="M:Shapes.Square.GetP">
+            <summary>
+            Method for getting perimetr of shape
+            </summary>
+            <returns>Perimetr of shape</returns>
+        </member>
+        <member name="M:Shapes.Square.GetS">
+            <summary>
+            Method for getting square of shape
+            </summary>
+            <returns>Square of shape</returns>
+        </member>
+        <member name="M:Shapes.Square.Equals(System.Object)">
+            <summary>
+            Overridden method for comparison two objects
+            </summary>
+            <param name="obj">Object for compare</param>
+            <returns>True - if objects equal, false if not </returns>
+        </member>
+        <member name="M:Shapes.Square.Equals(Shapes.Square)">
+            <summary>
+            Overridden method for comparison two squares
+            </summary>
+            <param name="obj">Square for compare</param>
+            <returns>True - if objects equal, false if not</returns>
+        </member>
+        <member name="M:Shapes.Square.GetHashCode">
+            <summary>
+            Overridden method for getting hashCode
+            </summary>
+            <returns>hashCode for object</returns>
+        </member>
+        <member name="M:Shapes.Square.ToString">
+            <summary>
+            Overridden method for getting string with information about object
+            </summary>
+            <returns>String with information about object</returns>
+        </member>
+        <member name="M:Shapes.Triangle.#ctor(Shapes.Material,System.Int32[])">
+            <summary>
+            Constructior for triangle
+            </summary>
+            <param name="material">Material of triangle</param>
+            <param name="points">Array of parametrs</param>
+        </member>
+        <member name="M:Shapes.Triangle.#ctor(Shapes.Figure)">
+            <summary>
+            Constructor for cuting new figure
+            </summary>
+            <param name="figure">Result of cutting figure </param>
+        </member>
+        <member name="M:Shapes.Triangle.GetP">
+            <summary>
+            Method for getting perimetr of shape
+            </summary>
+            <returns>Perimetr of shape</returns>
+        </member>
+        <member name="M:Shapes.Triangle.GetS">
+            <summary>
+            Method for getting square of shape
+            </summary>
+            <returns>Square of shape</returns>
+        </member>
+        <member name="M:Shapes.Triangle.Equals(System.Object)">
+            <summary>
+            Overridden method for comparison two objects
+            </summary>
+            <param name="obj">Object for compare</param>
+            <returns>True - if objects equal, false if not </returns>
+        </member>
+        <member name="M:Shapes.Triangle.Equals(Shapes.Triangle)">
+            <summary>
+            Overridden method for comparison two Triangles
+            </summary>
+            <param name="obj">Triangl for compare</param>
+            <returns>True - if objects equal, false if not</returns>
+        </member>
+        <member name="M:Shapes.Triangle.GetHashCode">
+            <summary>
+            Overridden method for getting hashCode
+            </summary>
+            <returns>hashCode for object</returns>
+        </member>
+        <member name="M:Shapes.Triangle.ToString">
+            <summary>
+            Overridden method for getting string with information about object
+            </summary>
+            <returns>String with information about object</returns>
+        </member>
+    </members>
+</doc>

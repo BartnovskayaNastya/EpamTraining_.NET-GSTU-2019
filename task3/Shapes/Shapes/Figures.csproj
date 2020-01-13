@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>e:\epamTraining\Tasks\EpamTraining_.NET-GSTU-2019\task3\Shapes\Shapes\Shapes.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
